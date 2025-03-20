@@ -1,0 +1,38 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc} 
+\usepackage{bm} %\bm{} bold math
+\usepackage{tikz} % for tikzpictures
+\usepackage{amsmath}
+\usetikzlibrary{positioning, calc} % For better label positioning
+
+\usepackage{caption} %for captionof{figure} in Figure enviorment
+
+\usepackage{multicol} %for multiple columns
+
+% figures in multicols
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+\usepackage{geometry}
+\geometry{
+    left = 1cm,
+    right = 1cm, 
+    top = 1cm,
+    bottom = 1cm
+}
+
+\title{Rotational Velocity in the Milky Way}
+
+\begin{document}
+
+\maketitle
+
+\begin{multicols}{2}
+\section{Model}
+
+\input{Model/CoordinateChange}
+\end{multicols}
+
+\end{document}
