@@ -1,0 +1,72 @@
+\subsection{Coordinate change}
+
+GAIA provides measurements of the radial velocity relative to the Sun's frame of reference. In our model, the Sun's frame moves around the center of the galaxy with a drift velocity (that of the LSR) plus a random vector.
+In the following, primate vectors are in the frame of reference of the Sun, whereas unprimed ones are in the frame of reference of the center of the galaxy. Angles are supposed to be expressed as radians. 
+Calling $\bm{v}_0$ the total velocity of the Sun relative to the center of the galaxy, we have the following relation:
+
+\begin{equation}\label{eq:SunVelocity}
+    \bm{v}_0 = \bm{v}_{LSR} + \bm{v}_{rand}
+\end{equation}
+
+\noindent
+We can fix the frames of reference in the center of the Galaxy and on the Sun as in fig.\ref{fig:FrameOfReference}. In the picture, all the velocities are represented in the frame of reference fixed at the center of the galaxy. In our model, in this frame, all the stars (and the LSR frame) move around the center with velocity $V_{rot}$, therefore, the velocity for a star s at angle $\varphi$ from the x-axis is:
+
+\begin{equation}\label{eq:VComponents}
+    \begin{aligned}
+        \bm{v}_s &= V_{rot} (-\hat{e}_{\varphi}) \\
+        \hat{e}_{\varphi} &= \begin{pmatrix} -\sin(\varphi) \\ \cos(\varphi) \end{pmatrix}
+    \end{aligned}
+\end{equation}
+
+\noindent
+In particular, we fix $\varphi = \pi$ for the Sun. Therefore, the velocity of the Sun, in the rest frame of the Galaxy is given by the equation:
+
+\begin{equation}\label{eq:VSun}
+    \bm{v}_0 = \begin{pmatrix} 0 \\ V_{rot} \end{pmatrix} + \begin{pmatrix} U_0 \\ V_0 \end{pmatrix}
+\end{equation}
+ 
+\noindent
+The frame of reference of the sun is moving with velocity $\bm{v}_0$ given by eq.\ref{eq:SunVelocity}, and its axis are rotating with an angular velocity $\bm{w}_{sun} = -w_{sun} \hat{e}_z$. Therefore, the velocity $\bm{v'}$ of a star s at distance $d$ from the Sun is given by the equation
+\begin{equation}\label{eq:ReferenceFrame}
+    \bm{v}_s' = \bm{v} - \bm{v}_0 - \bm{w}_{sun} \times \hat{e}_r' d = \bm{v} - \bm{v}_0 + w_{sun} \hat{e}_l' d
+\end{equation}
+\noindent 
+
+
+\noindent 
+The radial component of the velocity of a star with longitude l in the sun frame of reference is finally given by:
+
+\begin{equation}\label{eq:VSunRad}
+    \begin{aligned}
+        \hat{e}_r' &= \begin{pmatrix} \cos(l) \\ \sin(l) \end{pmatrix} \\
+        v_s^{\text{rad}'}  &= \bm{v}_s' \cdot \hat{e}_r' = \\ 
+        &=V_{rot} \biggl[ \sin\varphi \cos l - (1 + \cos\varphi)\sin l \biggr] - U_0 \cos l - V_0 \sin l
+    \end{aligned}
+\end{equation}
+\noindent
+%Note that the rotation of the axis of the frame of reference of the Sun contributes only to the longitudinal component of the relative velocities of stars since $\hat{e}_r' \cdot \hat{e}_l' = 0$.
+
+
+\input{Model/CCTikzPicture}
+
+Eq.\ref{eq:VSunRad} must be adapted to the actual data provided by GAIA, which means expressing $sin\varphi$ and $cos\varphi$ in terms of $l$ and the parallax $p$, expressed in arcoseconds. First of all, the distance in parsec can be computed as:
+
+\begin{equation}\label{eq:DistanceParallax}
+    d[pc] = \frac{1000}{p[arcsec]}
+\end{equation}
+
+\noindent
+Then, by applying the cosine theorem two times for $R, d, D, l, \varphi$ (fig.\ref{fig:FrameOfReference}), $cos\varphi$ can be written as:
+
+\begin{equation}\label{eq:CosPhi}
+    \cos\varphi = \frac{d \cos l - R}{\sqrt{d^2 + R^2 - 2dR \cos l}}
+\end{equation}
+
+\noindent
+and, therefore,
+
+\begin{equation}\label{eq:SinPhi}
+    \sin\varphi = \pm \sqrt{1 - \cos^2 \varphi} = \frac{d\sin l}{\sqrt{d^2 + R^2 -2dR \cos l}}
+\end{equation}
+\noindent
+By substituting eq.\ref{eq:DistanceParallax}-\ref{eq:SinPhi} into eq.\ref{eq:VSunRad}, we get an expression for the prediction of the model for the radial component of the velocity of star $i$ $v_{rad}^{mod}(l_i, p_i)$ as a function of the measurements of its longitude and parallax $l_i, p_i$.
