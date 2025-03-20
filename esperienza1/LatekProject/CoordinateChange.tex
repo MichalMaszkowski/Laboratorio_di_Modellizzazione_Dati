@@ -1,3 +1,19 @@
+\subsection{Introduction}
+
+In this excercise we aim to model the rotation of stars within the Milky Way around its center. 
+We introduce an inertial frame of reference centered at the center of the galaxy, 
+with xy-plane coinciding with the galactic plane and x-axis pointing away from the Sun. We will denote it as CG frame.
+We are going to assume that the stars in the CG frame move in circular orbits around its origin with a constant velocity $V_{rot}$.
+We are going to assume that also LSR (Local Standard of Rest) is moving with a velocity $V_{rot}$ in the y-direction in the CG frame.
+We also introduce a frame of reference centered at the Sun, with the x-axis pointing towards the center of the galaxy, 
+and the z-axis pointing towards the North Galactic Pole. We will denote it as Sun frame.
+The Sun frame is rotating with an angular velocity $w$ around the z-axis due to the rotation of the galaxy with respect to the CG frame.
+We are going to assume that Sun frame is moving with a velocity $U_0$ in the x-direction and $V_0$ in the y-direction in the CG frame with respect to the LSR.
+
+Our goal is to model the velocity of stars in the radial direction in the Sun frame of reference, 
+and find $V_rot$, $U_0$ and $V_0$ using Baysian Inference on the data provided by the GAIA mission. 
+The data contains the parallax and the radial motion as well as the longitude of stars with respect to the Sun frame of reference.
+
 \subsection{Coordinate change}
 
 GAIA provides measurements of the radial velocity relative to the Sun's frame of reference. In our model, the Sun's frame moves around the center of the galaxy with a drift velocity (that of the LSR) plus a random vector.
