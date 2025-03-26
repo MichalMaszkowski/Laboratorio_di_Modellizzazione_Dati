@@ -1,15 +1,14 @@
-\section{Introduction}
+\section*{Abstract}
 
-In this excercise we aim to model the rotation of stars within the Milky Way around its center. 
-We introduce an inertial frame of reference centered at the center of the galaxy, 
-with xy-plane coinciding with the galactic plane and x-axis pointing away from the Sun. We will denote it as CG frame.
-We are going to assume that the stars in the CG frame move in circular orbits around its origin with a constant velocity $V_{rot}$.
-We are going to assume that also LSR (Local Standard of Rest) is moving with a velocity $V_{rot}$ in the y-direction in the CG frame.
-We also introduce a frame of reference centered at the Sun, with the x-axis pointing towards the center of the galaxy, 
-and the z-axis pointing towards the North Galactic Pole. We will denote it as Sun frame.
-The Sun frame is rotating with an angular velocity $w$ around the z-axis due to the rotation of the galaxy with respect to the CG frame.
-We are going to assume that Sun frame is moving with a velocity $U_0$ in the x-direction and $V_0$ in the y-direction in the CG frame with respect to the LSR.
+%In this excercise we aim to model the rotation of stars within the Milky Way around its center. 
+In this report we present a model for the rotation of stars in the Milky Way around its center.
+%We introduce an inertial frame of reference centered at the center of the galaxy, with xy-plane coinciding with the galactic plane and x-axis pointing away from the Sun. We will denote it as CG frame.
+In a simpler model, we are going to assume that the stars in the CG frame move in circular orbits around its origin with a constant velocity $V_{rot}$, as well as the LSR (Local Standard of Rest), and that the Sun frame is moving with a velocity $U_{\odot}$ in the x-direction and $V_{\odot}$ in the y-direction in the CG frame with respect to the LSR.
 
-Our goal is to model the velocity of stars in the radial direction in the Sun frame of reference, 
-and find $V_rot$, $U_0$ and $V_0$ using Baysian Inference on the data provided by the GAIA mission. 
-The data contains the parallax and the radial motion as well as the longitude of stars with respect to the Sun frame of reference.
+%We are going to assume that also LSR (Local Standard of Rest) is moving with a velocity $V_{rot}$ in the y-direction in the CG frame.
+%We also introduce a frame of reference centered at the Sun, with the x-axis pointing towards the center of the galaxy, and the z-axis pointing towards the North Galactic Pole. We will denote it as Sun frame.
+%The Sun frame is rotating with an angular velocity $w$ around the z-axis due to the rotation of the galaxy with respect to the CG frame.
+
+%Our goal is to model the velocity of stars in the radial direction in the Sun frame of reference, and find $V_{rot}$, $U_0$ and $V_0$ using Baysian Inference on the data provided by the GAIA mission.
+
+The data provided by GAIA DR2 [reference to gaia] contains, for each star, the parallax and the radial velocity with respect to the Sun, as well as its longitude with respect to the Sun frame of reference.
