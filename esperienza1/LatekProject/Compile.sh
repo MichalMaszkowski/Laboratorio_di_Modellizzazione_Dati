@@ -1,7 +1,7 @@
 #!/bin/bash
 
 pdflatex main.tex
-bibtex main
+biber main
 pdflatex main.tex
 pdflatex main.tex
 
