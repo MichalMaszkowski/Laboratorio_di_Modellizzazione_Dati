@@ -1,0 +1,7 @@
+\section{Datas}
+
+In this work we will use data taken from GAIA DR2~\cite{GAIADR2}.From the vast dataset of stars analyzed by GAIA, we first select only those for which radial velocities, $v_{\text{rad}}$, were measured relative to the Sun using the Doppler effect. To manage the dataset size efficiently, we then apply a random selection to significantly reduce the quantity of data.
+
+For each selected star, we extract key parameters from GAIA DR2, including parallax $p$ and its associated error $\sigma_{\text{p}}$, radial velocity $v_{\text{rad}}$ with its measurement uncertainty $\sigma_{\text{v}}$, and galactic coordinates, i.e. latitude $b$ and longitude $l$.
+
+To focus our analysis on stars located within the galactic plane, we impose a selection criterion of $\abs{b} < 5°$. Additionally, to ensure the reliability of the data, we retain only stars with a relative parallax error smaller than 20% and a radial velocity error below 5 \unit{\kilo\meter\per\second}.
