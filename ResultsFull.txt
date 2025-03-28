@@ -1,0 +1,9 @@
+1 -> Vrot
+2 -> u
+3 -> v 
+4 -> sigma
+
+Parameter 1: Median = 204.1900, 95% CI = [201.9788, 206.4081]
+Parameter 2: Median = 11.7086, 95% CI = [11.3777, 12.0365]
+Parameter 3: Median = 21.7749, 95% CI = [21.4743, 22.0770]
+Parameter 4: Median = 30.6099, 95% CI = [30.4534, 30.7670]
