@@ -1,15 +1,16 @@
 \subsection{Physical Model}
 
-In our model, the Sun's frame moves around the Galactic Center GC with a drift velocity (that of the Local Standard of Rest LSR) plus a random vector. The drift velocity of the LSR in this model is considered in module equal to the drift velocities of each star in our galaxy and analyzed by GAIA DR2
-In the following, primate vectors are in the frame of reference of the Sun, whereas unprimed ones are in the frame of reference of the center of the galaxy. Angles are supposed to be expressed as radians. 
-Calling $\bm{v}_0$ the total velocity of the Sun relative to the center of the galaxy, we have the following relation:
+In our model, the Sun's frame moves around the Galactic Center GC with a drift velocity (that of the Local Standard of Rest LSR) plus a random vector. The drift velocity of the LSR in this model is considered in module equal to the drift velocities of each star in our galaxy and analyzed by GAIA DR2.
+In the following, primate vectors are in the frame of reference of the Sun, whereas unprimed ones are in the frame of reference of the center of the galaxy. Angles are supposed to be expressed as radians.
+
+Calling $\bm{v}_{\odot}$ the total velocity of the Sun relative to the center of the galaxy, we have the following relation:
 
 \begin{equation}\label{eq:SunVelocity}
-    \bm{v}_0 = \bm{v}_{LSR} + \bm{v}_{rand}
+    \bm{v}_{\odot} = \bm{v}_{\text{LSR}} + \bm{v}_{\text{rand}}
 \end{equation}
 
 \noindent
-We can fix the frames of reference in the center of the Galaxy and on the Sun as in fig.\ref{fig:FrameOfReference}. In the picture, all the velocities are represented in the frame of reference fixed at the center of the galaxy. In our model, in this frame, all the stars (and the LSR frame) move around the center with velocity $V_{rot}$, therefore, the velocity for a star s at angle $\varphi$ from the x-axis is:
+We can fix the frames of reference in the center of the Galaxy and on the Sun as in fig.\ref{fig:FrameOfReference}. In the picture, all the velocities are represented in the frame of reference fixed at the center of the galaxy. In our model, in this frame, all the stars (and the LSR frame) move around the center with velocity $V_{\text{rot}}$, therefore, the velocity for a star s at angle $\varphi$ from the $x$-axis is:
 
 \begin{equation}\label{eq:VComponents}
     \begin{aligned}
@@ -19,28 +20,26 @@ We can fix the frames of reference in the center of the Galaxy and on the Sun as
 \end{equation}
 
 \noindent
-In particular, we fix $\varphi = \pi$ for the Sun. Therefore, the velocity of the Sun, in the rest frame of the Galaxy is given by the equation:
+In particular, the Sun in this frame of reference has $\varphi = \pi$ and we add for it also $\bm{v}_{\text{rand}}$, as in equation \ref{eq:SunVelocity}, which is composed by two component, $U_{\odot}$ along the $x$-axis, and $V_{\odot}$ along the $y$ one. In this way its velocity is given by the equation:
 
 \begin{equation}\label{eq:VSun}
-    \bm{v}_0 = \begin{pmatrix} 0 \\ V_{rot} \end{pmatrix} + \begin{pmatrix} U_0 \\ V_0 \end{pmatrix}
+    \bm{v}_{\odot} = \begin{pmatrix} 0 \\ V_{rot} \end{pmatrix} + \begin{pmatrix} U_{\odot} \\ V_{\odot} \end{pmatrix}
 \end{equation}
  
 \noindent
-The frame of reference of the sun is moving with velocity $\bm{v}_0$ given by eq.\ref{eq:SunVelocity}, and its axis are rotating with an angular velocity $\bm{w}_{sun} = -w_{sun} \hat{e}_z$. Therefore, the velocity $\bm{v'}_s$ of a star s at distance $d$ from the Sun is given by the equation
+The frame of reference of the sun is moving with velocity $\bm{v}_{\odot}$ given by eq.\ref{eq:SunVelocity}, and its axis are rotating with an angular velocity $\bm{w}_{\odot} = -w_{\odot} \hat{e}_z$. Therefore, the velocity $\bm{v'}_s$ of a star s at distance $d$ from the Sun is given by the equation
 \begin{equation}\label{eq:ReferenceFrame}
-    \bm{v}_s' = \bm{v}_s - \bm{v}_0 - \bm{w}_{sun} \times \hat{e}_r' d = \bm{v}_s - \bm{v}_0 + w_{sun} \hat{e}_l' d
+    \bm{v}_s' = \bm{v}_s - \bm{v}_{\odot} - \bm{w}_{\odot} \times \hat{e}_r' d = \bm{v}_s - \bm{v}_{\odot} + w_{\odot} \hat{e}_l' d
 \end{equation}
-\noindent 
-
 
 \noindent 
-The radial component of the velocity of a star with longitude l in the sun frame of reference is finally given by:
+The radial component $v_{\text{rad}'}$ of the velocity of a star with longitude $l$ in the sun frame of reference is finally given by:
 
 \begin{equation}\label{eq:VSunRad}
     \begin{aligned}
         \hat{e}_r' &= \begin{pmatrix} \cos(l) \\ \sin(l) \end{pmatrix} \\
-        v_s^{\text{rad}'}  &= \bm{v}_s' \cdot \hat{e}_r' = \\ 
-        &=V_{rot} \biggl[ \sin\varphi \cos l - (1 + \cos\varphi)\sin l \biggr] - U_0 \cos l - V_0 \sin l
+        v_{\text{rad}'}  &= \bm{v}_s' \cdot \hat{e}_r' = \\ 
+        &=V_{\text{rot}} \biggl[ \sin\varphi \cos l - (1 + \cos\varphi)\sin l \biggr] - U_{\odot} \cos l - V_{\odot} \sin l
     \end{aligned}
 \end{equation}
 \noindent
@@ -49,24 +48,31 @@ The radial component of the velocity of a star with longitude l in the sun frame
 
 \input{CCTikzPicture.tex}
 
-Eq.\ref{eq:VSunRad} must be adapted to the actual data provided by GAIA, which means expressing $sin\varphi$ and $cos\varphi$ in terms of $l$ and the parallax $p$, expressed in arcoseconds. First of all, the distance in parsec can be computed as:
+Eq.\ref{eq:VSunRad} must be adapted to the actual data provided by GAIA, which means expressing $sin\varphi$ and $cos\varphi$ in terms of $l$ and the parallax $p$, expressed in milliarcoseconds (\unit{mas}). First of all, the distance in parsec can be computed as:
 
 \begin{equation}\label{eq:DistanceParallax}
-    d[pc] = \frac{1000}{p[arcsec]}
+    d[\unit{pc}] = \frac{1000}{p[\unit{mas}]}
 \end{equation}
 
 \noindent
-Then, by applying the cosine theorem two times for $R, d, D, l, \varphi$ (fig.\ref{fig:FrameOfReference}), $cos\varphi$ can be written as:
+Then, by applying the cosine theorem two times for $R, d, D, l, \varphi$ (fig.\ref{fig:FrameOfReference}), we get:
+\begin{equation}\label{eq:D}
+    D=\sqrt{d^2 + R^2 - 2dR \cos l}
+\end{equation}
 
 \begin{equation}\label{eq:CosPhi}
-    \cos\varphi = \frac{d \cos l - R}{\sqrt{d^2 + R^2 - 2dR \cos l}}
+    \cos\varphi = \frac{d \cos l - R}{D}
 \end{equation}
 
 \noindent
 and, therefore,
 
 \begin{equation}\label{eq:SinPhi}
-    \sin\varphi = \pm \sqrt{1 - \cos^2 \varphi} = \frac{d\sin l}{\sqrt{d^2 + R^2 -2dR \cos l}}
+    \sin\varphi = \pm \sqrt{1 - \cos^2 \varphi} = \frac{d\sin l}{D}
 \end{equation}
 \noindent
-By substituting eq.\ref{eq:DistanceParallax}-\ref{eq:SinPhi} into eq.\ref{eq:VSunRad}, we get an expression for the prediction of the model for the radial component of the velocity of star $i$ $v_{rad}^{mod}(l_i, p_i)$ as a function of the measurements of its longitude and parallax $l_i, p_i$.
+By substituting eq.\ref{eq:DistanceParallax}-\ref{eq:SinPhi} into eq.\ref{eq:VSunRad}, we get an expression for the prediction of the model for the radial component of the velocity of star $i$ $v_{rad,i}^{mod}(l_i, p_i)$ as a function of the measurements of its longitude and parallax $l_i, p_i$:
+
+\begin{equation}\label{eq:VradModel}
+    $v_{rad,i}^{mod}(l_i, p_i)$ =  V_{\text{rot}}\sin l_i (\frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1) - U_{\odot}\cos l_i - V_{\odot}\sin l_i
+\end{equation}
