@@ -80,11 +80,11 @@ Then, by geometric considerations we can evaluate $D, \sin\varphi$ and $\cos\var
     \cos\varphi = \frac{d \cos l - R}{D}
 \end{equation}
 \noindent
-By substituting eq.\ref{eq:DistanceParallax}-\ref{eq:CosPhi} into eq.\ref{eq:VSunRad}, we get an expression for the prediction of the model for the radial component of the velocity of star $i$ $v_{rad,i}^{mod}(l_i, p_i)$ as a function of the measurements of its longitude and parallax $l_i, p_i$:
+By substituting eq.\ref{eq:DistanceParallax}-\ref{eq:CosPhi} into eq.\ref{eq:VSunRad}, we get an expression for the prediction of the model for the radial component of the velocity of star $i$ $\hat{v}_{rad,i}^{(1)}(l_i, p_i)$ as a function of the measurements of its longitude and parallax $l_i, p_i$:
 
 \begin{equation}\label{eq:VradModel1}
     \begin{aligned}
-        v_{rad,i}^{mod1}(l_i, p_i) =&  V_{\text{rot}}\sin l_i (\frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1) -\\
+        \hat{v}_{rad,i}^{(1)}(l_i, p_i) =&  V_{\text{rot}}\sin l_i (\frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1) -\\
         &- U_{\odot}\cos l_i - V_{\odot}\sin l_i
     \end{aligned}
 \end{equation}
@@ -93,7 +93,7 @@ In a second, more sofisticated model, we add to the model for the radial velocit
 
 \begin{equation}\label{eq:VradModel2}
     \begin{aligned}
-        v_{rad,i}^{mod2}(l_i, p_i) =&  V_{\text{rot}}\sin l_i (\frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1) -\\
+        \hat{v}_{rad,i}^{(2)}(l_i, p_i) =&  V_{\text{rot}}\sin l_i (\frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1) -\\
         &- U_{\odot}\cos l_i - V_{\odot}\sin l_i + v_{\text{rand,i}}
     \end{aligned}
 \end{equation}

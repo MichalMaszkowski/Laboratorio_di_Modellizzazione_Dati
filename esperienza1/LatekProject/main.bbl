@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{GAIADR2}{article}{}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{GAIADR2}{article}{}{}
       \name{author}{453}{}{%
         {{hash=12425f8aa1784bdbe9321c97b37cd012}{%
            family={Brown},
@@ -2314,10 +2314,12 @@
       }
       \strng{namehash}{a280b9e0f4e76e606fcd3fa55f3b1f55}
       \strng{fullhash}{7e6f17b2b8708673ab64ebf020ee226c}
+      \strng{fullhashraw}{7e6f17b2b8708673ab64ebf020ee226c}
       \strng{bibnamehash}{a280b9e0f4e76e606fcd3fa55f3b1f55}
       \strng{authorbibnamehash}{a280b9e0f4e76e606fcd3fa55f3b1f55}
       \strng{authornamehash}{a280b9e0f4e76e606fcd3fa55f3b1f55}
       \strng{authorfullhash}{7e6f17b2b8708673ab64ebf020ee226c}
+      \strng{authorfullhashraw}{7e6f17b2b8708673ab64ebf020ee226c}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
