@@ -11,3 +11,9 @@ rm *.gfc
 rm *.log
 rm *.blg
 rm *.bcf
+
+rm *.fls
+
+rm *.fdb_latexmk
+
+rm *-SAVE-ERROR

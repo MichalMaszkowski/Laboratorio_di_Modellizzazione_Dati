@@ -9,6 +9,7 @@
 \usepackage{caption} %for captionof{figure} in Figure enviorment
 
 \usepackage{multicol} %for multiple columns
+\usepackage{float} %for [H] for floats in muticols
 
 % figures in multicols
 \newenvironment{Figure}
@@ -28,20 +29,33 @@
 
 \usepackage{siunitx}
 
+\usepackage{ mathrsfs } % for mathscr fro L of likelyhood
+\newcommand{\Like}{\mathscr{L}}
+\newcommand{\Prior}{\mathbb{P}}
+\newcommand{\Posterior}{\mathbb{P}}
+
+
 \title{Rotational Velocity in the Milky Way}
+\author{Colombo Gabriele, Maszkowski Michal, Seghezzi Daniele}
+\date{\today}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% frontmatter not in multicols
 \maketitle
-
 
 \input{Introduction.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% mainmatter in multicols (save some space)
 \begin{multicols}{2}
 \input{Datas.tex} % this is a section on its own
 
 \section{Model}
+In this section we present the physical and the statistical models we developed for the study of the Galactic kinematics of the Milky Way. Our physical assumptions, presented in the paragraph~\ref{subsec:PhysicalModel}, lead to a prediction for the radial motion of stars with respect to the Sun as a function of their longitude $l$ and parallax $p$. The prediction, for each star, can then be compared to the direct measurement. In the paragraph~\ref{subsec:StatisticalModel} we formally present our statistical assumptions on the data and the parameters of the two models with their priors and likelihoods.
+
 \input{PhysicalModel.tex}
 \input{StatisticalModel.tex}
 
@@ -49,7 +63,11 @@
 
 \input{Conclusions.tex}
 
-\end{multicols}
+\end{multicols} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% endmatter, not in multicols
+\input{Appendix.tex}
 
 \printbibliography
 
