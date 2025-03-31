@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.7.4)  31 MAR 2025 15:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.7.4)  31 MAR 2025 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -974,24 +974,23 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 47
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) (./Introduction.tex
-Overfull \hbox (18.97107pt too wide) in paragraph at lines 18--19
-[]\T1/cmr/m/n/10 With the first model, we es-ti-mated the pa-ram-e-ters and the
-ir 95% con-fi-dence in-ter-val to be: $\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 = 2
-11\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 45$\T1/cmr/m/n/10 , 95% CI = [211.42, 211.5
-0]
- []
-
-) (./Datas.tex
+) (./Introduction.tex) (./Datas.tex
 <Fig/DataModelPresentation.png, id=4, 667.0521pt x 701.7417pt>
 File: Fig/DataModelPresentation.png Graphic file (type png)
 <use Fig/DataModelPresentation.png>
 Package pdftex.def Info: Fig/DataModelPresentation.png  used on input line 5.
 (pdftex.def)             Requested size: 260.00917pt x 273.52826pt.
-) (./PhysicalModel.tex [1
+)
+Overfull \vbox (4.23671pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (4.23671pt too high) has occurred while \output is active []
+
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Fig/DataModelPresentatio
-n.png>] (./CCTikZPicture.tex)
+n.png>] (./PhysicalModel.tex (./CCTikZPicture.tex)
 Overfull \hbox (6.38692pt too wide) detected at line 76
 [][][]
  []
@@ -1002,7 +1001,7 @@ Overfull \hbox (6.38692pt too wide) detected at line 86
  []
 
 ) (./StatisticalModel.tex [2]
-Overfull \hbox (8.12686pt too wide) detected at line 44
+Overfull \hbox (8.12686pt too wide) detected at line 59
 [][] \U/rsfs/m/n/10 L[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 Dj\OML/cmm/m/it/10 ^^R
 []\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@[] [] []
  []
@@ -1045,11 +1044,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  27125 strings out of 480247
  572796 string characters out of 5896152
- 1219372 words of memory out of 5000000
+ 1220372 words of memory out of 5000000
  44650 multiletter control sequences out of 15000+600000
  489938 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 100i,13n,104p,985b,1290s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 100i,13n,104p,751b,1290s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-
@@ -1073,7 +1072,7 @@ fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf
 /fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/
 cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pf
 b>
-Output written on main.pdf (5 pages, 925175 bytes).
+Output written on main.pdf (5 pages, 925291 bytes).
 PDF statistics:
  156 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream
