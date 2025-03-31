@@ -1,5 +1,8 @@
 \subsection{Statistical Model}\label{subsec:StatisticalModel}
-In the following we describe the Bayesian inference we have made on the parameters of the two models. We used Monte Carlo Markov Chains (MCMC) provided by the emcee package in python to get an approximation of the non-normalized posteriors of our models $\Posterior^{*}(\theta \vert \mathcal{D})$, considering only the numerator of Bayes' theorem (posterior):
+In the following we describe the Bayesian inference we have made on the parameters of the two models. 
+We used Monte Carlo Markov Chains (MCMC) provided by the emcee package in python 
+to get an approximation of the non-normalized posteriors of our models 
+$\Posterior^{*}(\theta \vert \mathcal{D})$, considering only the numerator of Bayes' theorem (posterior):
 
 \begin{equation}\label{Eq:NonNormPosterior}
     \Posterior^{*}(\theta \vert \mathcal{D}) = \Like(\mathcal{D} \vert \theta) \Prior(\theta)
@@ -8,35 +11,79 @@ In the following we describe the Bayesian inference we have made on the paramete
 \noindent where $\Like(\mathcal{D} \vert \theta)$ is the likelihood and $\Prior(\theta)$ is the prior. In practice, the logarithms of these quantities were used to achieve numerical stability.
 
 %write this here to avoid repetitions
-For simplicity, in both models, we assumed each measurement and each parameter to be independent of all the others. Under this assumptions, the likelihood and the prior factorize in the product of individual terms. Then, we assume the value $m$ of each measure to be  the sum of its true value, and a random error $\epsilon \sim N(0, \sigma_\text{m})$, extracted from a normal distribution centered at 0, with standard deviation given by the statistical uncertainty provided by GAIA database.
+For simplicity, in both models, we assumed each measurement and each parameter to be independent of all the others. 
+Under this assumptions, the likelihood and the prior factorize in the product of individual terms. 
+Then, we assume the value $m$ of each measure to be  the sum of its true value, 
+and a random error $\epsilon \sim N(0, \sigma_\text{m})$, extracted from a normal distribution centered at 0, 
+with standard deviation given by the statistical uncertainty provided by GAIA database.
 
-For the first model we have a set of three parameters $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$.% and for this model we will assume each measurement of the stars' radial velocity to be a random variable sampled from a gaussian distributrion centered at the true value $v_{\text{rad}}$, with standard deviation given by the error reported by GAIA, $\sigma_{\text{v}}$ ($v_{\text{rad}} \sim N(v_{\text{rad}},\sigma_{\text{v}})$). Moreover, we will also assume the measurements to be mutually indipendent. From this two assumptions follow directly that our likelihood will be a product of gaussians. So the log-likelihood for this model is:
-Neglecting the uncertainties associated to the parallax measurements, the difference between the measure of the radial velocity $v_{\text{rad}, i}$ and its prediction $\hat{v}^{(1)}_{\text{rad}, i}$ is a random variable extracted from a normal distribution centered in 0, with standard deviation only given by the statistical uncertainty on the measurements of the radial velocity. The log-likelihood of this model therefore is given by the sum of independant terms as:
+For the first model we have a set of three parameters $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$. 
+% and for this model we will assume each measurement of the stars' radial velocity 
+% to be a random variable sampled from a gaussian distributrion centered at the true value $v_{\text{rad}}$, 
+% with standard deviation given by the error reported by GAIA, 
+% $\sigma_{\text{v}}$ ($v_{\text{rad}} \sim N(v_{\text{rad}},\sigma_{\text{v}})$). 
+% Moreover, we will also assume the measurements to be mutually indipendent. 
+% From this two assumptions follow directly that our likelihood will be a product of gaussians. 
+% So the log-likelihood for this model is:
+Neglecting the uncertainties associated to the parallax measurements, 
+the difference between the measure of the radial velocity $v_{\text{rad}, i}$ 
+and its prediction $\hat{v}^{(1)}_{\text{rad}, i}$ is a random variable 
+extracted from a normal distribution centered in 0, 
+with standard deviation only given by the statistical uncertainty on the measurements of the radial velocity. 
+The log-likelihood of this model therefore is given by the sum of independant terms as:
 
 \begin{equation}\label{Eq:LogLikeMod1}
     \log \mathbb{P}^{(1)}(\mathcal{D} \vert \theta_1) = -\frac{1}{2}\sum_i[\log(2\pi\sigma_{\text{v},i}^2)+\frac{(v_{rad,i} - \hat{v}_{rad,i}^{(1)})^2}{\sigma_{\text{v},i}^2}]
 \end{equation}
 
 %As prior for this model, we firstly assume the three parameters to be indipendent each other, which is pretty realistic since the rotational motion of all the stars shouldn't influence the peculiar motion of the Sun, and its two components on the galactic should be indipendent a priori. For this reason the prior is the product of the priors of each single parameter. 
-Then, we chose a flat prior for $V_{\text{rot}}\in[0,\qty{500}{\kilo\meter\per\second}]$, in order to include typical values of the rotational motion of stars in spiral barred (Sb) galaxies which are found in the range [144 \unit{\kilo\meter\per\second}, 330 \unit{\kilo\meter\per\second}] \cite{Schneider2015}. For $U_\odot$ and $V_\odot$ we chose a gaussian prior centered in 0, $\log\mathbb{P}^{(1)}(U_\odot) + \log\mathbb{P}^{(1)}(U_\odot) \sim - \frac{U_\odot^2 + V_{\odot}^2}{v_{\text{gal}}^2}$, assuming the peculiar motion of the sun to be analogous to a stochastic thermal motion. %We chose for the standard deviation of these priors to be $v_{\text{gal}}=\qty{200}{\kilo\meter\per\second}$ since, as previously described, these are the order of magnitude for stars speed in galaxies.
-As a value for $v_{\text{gal}}$, we arbitrarily chose 200 \unit{\kilo\meter\per\second} as a reference number for the random motion of stars in a Sb galaxy.
+Then, we chose a flat prior for $V_{\text{rot}}\in[0,\qty{500}{\kilo\meter\per\second}]$, 
+in order to include typical values of the rotational motion of stars in spiral barred (Sb) galaxies 
+which are found in the range [144 \unit{\kilo\meter\per\second}, 330 \unit{\kilo\meter\per\second}] \cite{Schneider2015}. 
+For $U_\odot$ and $V_\odot$ we chose a gaussian prior centered in 0, 
+$\log\mathbb{P}^{(1)}(U_\odot) + \log\mathbb{P}^{(1)}(U_\odot) \sim - \frac{U_\odot^2 + V_{\odot}^2}{v_{\text{gal}}^2}$, 
+assuming the peculiar motion of the sun to be analogous to a stochastic thermal motion. 
+%We chose for the standard deviation of these priors to be $v_{\text{gal}}=\qty{200}{\kilo\meter\per\second}$ since, 
+% as previously described, these are the order of magnitude for stars speed in galaxies.
+As a value for $v_{\text{gal}}$, we arbitrarily chose 200 \unit{\kilo\meter\per\second} 
+as a reference number for the random motion of stars in a Sb galaxy.
 
 In our second model, there are four parameters: $\mathbf{\theta_2} = (V_{rot}, U_{\odot}, V_{\odot}, \sigma)$. 
-%As for the measurement of the radial velocities, we also assume the measurement of the stars' parallax to be a random variable sampled from a gaussian distribution centered at the true value $p$, with standard deviation given by the error reported by GAIA, $\sigma_{\text{p}}$ ($p \sim N(p,\sigma_{\text{p}})$). Assuming all the measurements to be independant from one another, the log-likelihood for this model is:
-Accounting for the errors on the parallax measurements, the model prediction $\hat{v}^{(2)}_{\text{rad}, i}$ (see equation \ref{eq:VradModel2}) is a random variable extracted from a normal distribution centered in 0, and with variance $\sigma^(2)$ given by the sum of the variance of the random component $\sigma^2$, and the contribution $\sigma^2_{\text{p} -> (2)}$ originating from the error on the parralax measurement, which can by computed by error propagation as:
+%As for the measurement of the radial velocities, we also assume the measurement of the stars' parallax 
+% to be a random variable sampled from a gaussian distribution centered at the true value $p$, 
+% with standard deviation given by the error reported by GAIA, $\sigma_{\text{p}}$ ($p \sim N(p,\sigma_{\text{p}})$). 
+% Assuming all the measurements to be independant from one another, the log-likelihood for this model is:
+Accounting for the errors on the parallax measurements, 
+the model prediction $\hat{v}^{(2)}_{\text{rad}, i}$ (see equation \ref{eq:VradModel2}) is a random variable 
+extracted from a normal distribution centered in 0, and with variance $\sigma^(2)$ 
+given by the sum of the variance of the random component $\sigma^2$, 
+and the contribution $\sigma^2_{\text{p} -> (2)}$ originating from the error on the parralax measurement, 
+which can by computed by error propagation as:
 
 \begin{equation}\label{eq:ParallaxErrorPropagation}
     \sigma^2_{\text{p}_i -> (2)} = {\biggl( \frac{\partial \hat{v}^{(2)}_{\text{rad}, i}}{\partial \text{p}_i} \biggr)}^2 \sigma^2_{\text{p}_i}
 \end{equation}
 
-and for the random motion of stars, the difference between the measured value of the radial velocity $v_{\text{rad}, i}$ and the model prediction $\hat{v}^{(2)}_{\text{rad}, i}$ is a random variable extracted from a normal distribution centered in 0, and with total variance given by the sum of the variances of the error on the radial velocity measurements, that 
+and for the random motion of stars, the difference between the measured value of the radial velocity $v_{\text{rad}, i}$
+ and the model prediction $\hat{v}^{(2)}_{\text{rad}, i}$ is a random variable extracted from a normal distribution centered in 0, 
+ and with total variance given by the sum of the variances of the error on the radial velocity measurements, that 
 
 \begin{equation}\label{Eq:LogLikeMod2}
     \log \mathbb{P}^{(2)}(\mathcal{D} \vert \theta_2) = -\frac{1}{2}\sum_i\left\{\log[2\pi(\sigma_{i}^2+\sigma^2)]+\frac{(v_{rad,i} - \hat{v}_{rad,i}^{(2)})^2}{\sigma_{i}^2+\sigma^2}\right\}
 \end{equation}
 
-\noindent where $\sigma_i^2$ is the sum of the variance for the normal distribution on the radial velocitiy measurements and for the one on the parallax propagated through the model (see equation \ref{eq:VradModel2}).
+\noindent where $\sigma_i^2$ is the sum of the variance for the normal distribution on the radial velocitiy measurements 
+and for the one on the parallax propagated through the model (see equation \ref{eq:VradModel2}).
 
-We keep for the first three parameters the same priors decided in the first model, while we also assume the fourth parameter $\sigma$ to be uncorrelated to the others (stars peculiar motion at a first glance shouldn't depend on the Sun's one either on their average rotational motion). 
+We keep for the first three parameters the same priors decided in the first model, 
+while we also assume the fourth parameter $\sigma$ to be uncorrelated to the others 
+(stars peculiar motion at a first glance shouldn't depend on the Sun's one either on their average rotational motion). 
 
-GAIA measurements are affected by statistical uncertainties on the evaluations of the parallax and the radial velocity. We assume the measurements to be random variables sampled from a gaussian distributrion centered at the true value of the respective quantity, with standard deviation given by the error reported by GAIA ($v_{rad} \sim N(v_{\text{rad}},\sigma_{\text{v}})$). Assuming the pysical model to be exact, and the measurements to be independant, the difference between the direct measure of the radial velocity, and the corresponding value given by the model by eq.\ref{eq:VSunRad} is a random variable with variance that can be computed through propagation of errors as described in the following. 
+GAIA measurements are affected by statistical uncertainties on the evaluations of the parallax and the radial velocity. 
+We assume the measurements to be random variables sampled from a gaussian distributrion 
+centered at the true value of the respective quantity, with standard deviation 
+given by the error reported by GAIA ($v_{rad} \sim N(v_{\text{rad}},\sigma_{\text{v}})$). 
+Assuming the pysical model to be exact, and the measurements to be independant, 
+the difference between the direct measure of the radial velocity, 
+and the corresponding value given by the model by eq.\ref{eq:VSunRad} is a random variable 
+with variance that can be computed through propagation of errors as described in the following. 
