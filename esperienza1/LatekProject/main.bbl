@@ -2340,6 +2340,40 @@
       \verb http://dx.doi.org/10.1051/0004-6361/201833051
       \endverb
     \endentry
+    \entry{mackay2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=99e8c42965ec01aec3921af3e8ecd658}{%
+           family={MacKay},
+           familyi={M\bibinitperiod},
+           given={David\bibnamedelima J.C.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{99e8c42965ec01aec3921af3e8ecd658}
+      \strng{fullhash}{99e8c42965ec01aec3921af3e8ecd658}
+      \strng{bibnamehash}{99e8c42965ec01aec3921af3e8ecd658}
+      \strng{authorbibnamehash}{99e8c42965ec01aec3921af3e8ecd658}
+      \strng{authornamehash}{99e8c42965ec01aec3921af3e8ecd658}
+      \strng{authorfullhash}{99e8c42965ec01aec3921af3e8ecd658}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521642989}
+      \field{title}{Information Theory, Inference, and Learning Algorithms}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb http://www.inference.phy.cam.ac.uk/mackay/itila/
+      \endverb
+      \verb{url}
+      \verb http://www.inference.phy.cam.ac.uk/mackay/itila/
+      \endverb
+    \endentry
     \entry{Schneider2015}{book}{}
       \name{author}{1}{}{%
         {{hash=974c56abd961d7fc57e527b6b1225647}{%
