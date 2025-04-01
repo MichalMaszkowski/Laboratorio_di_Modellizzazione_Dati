@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1743508889.11978 "main.bcf" "main.bbl" "main" 1743509055.10274 0
+["biber main"] 1743508889.11978 "main.bcf" "main.bbl" "main" 1743509434.15619 0
   "Bibliography.bib" 1743508883 11438 c93c0e73ccea3ab0f10c043a265c6ade ""
-  "main.bcf" 1743509054 109327 2eadc566443df781d2f61da9b410d23d "pdflatex"
+  "main.bcf" 1743509433 109327 2eadc566443df781d2f61da9b410d23d "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1743509052.01264 "c:/Users/sedan/Documents/GitHub/Galassie/esperienza1/LatekProject/main.tex" "main.pdf" "main" 1743509055.10605 2
-  "Appendix.tex" 1743508883 542 3de1b828eb2d94c535d0148877916a9b ""
+["pdflatex"] 1743509432.18069 "c:/Users/sedan/Documents/GitHub/Galassie/esperienza1/LatekProject/main.tex" "main.pdf" "main" 1743509434.15685 2
+  "Appendix.tex" 1743509428 557 5ba409b651b79c81876be909594e2b63 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1000.tfm" 993061956 3200 328792ff19833a39406f06fa0555a6dc ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1200.tfm" 993061958 3200 b8d69bc738e5ef3e08cefeef3109ff56 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1440.tfm" 993061960 3196 0b37fa3083e15c57cfa8c4ff52f2807a ""
@@ -239,9 +239,9 @@
   "PhysicalModel.tex" 1743508883 5778 96fa294a06c63262e1e541f264ca0265 ""
   "StatisticalModel.tex" 1743508883 7664 01d20f890173bfc261602e1bb7323a8a ""
   "c:/Users/sedan/Documents/GitHub/Galassie/esperienza1/LatekProject/main.tex" 1743508883 2407 c156ee65c014a84b3367673e75732b89 ""
-  "main.aux" 1743509054 6221 75812f35e15789508c5fcf622fc059f9 "pdflatex"
+  "main.aux" 1743509433 6251 fefbdede2cf2bafc8a9be3b7e18e1a62 "pdflatex"
   "main.bbl" 1743508893 99199 6593e0ec74355749a598a4776e62574d "biber main"
-  "main.out" 1743509054 666 95dde34b2afbaa31552eb4574e8f98d4 "pdflatex"
+  "main.out" 1743509433 744 ae9b3de51b4714de8e5f492b31d54664 "pdflatex"
   "main.tex" 1743508883 2407 c156ee65c014a84b3367673e75732b89 ""
   (generated)
   "main.aux"

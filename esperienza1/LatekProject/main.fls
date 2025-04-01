@@ -267,6 +267,9 @@ INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\jknappen\mathrsfs.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\color.sty
+INPUT .\main.aux
+INPUT .\main.aux
+INPUT main.aux
 OUTPUT main.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
