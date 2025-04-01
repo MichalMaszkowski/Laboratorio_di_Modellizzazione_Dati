@@ -11,6 +11,18 @@
 \usepackage{multicol} %for multiple columns
 \usepackage{float} %for [H] for floats in muticols
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
 % figures in multicols
 \newenvironment{Figure}
   {\par\medskip\noindent\minipage{\linewidth}}
@@ -29,8 +41,10 @@
 
 \usepackage{siunitx}
 
-\usepackage{ mathrsfs } % for mathscr fro L of likelyhood
-\newcommand{\Like}{\mathscr{L}}
+\usepackage{ mathrsfs } % for mathscr
+\usepackage{amssymb} % for matcal
+
+\newcommand{\Like}{\mathcal{L}}
 \newcommand{\Prior}{\mathbb{P}}
 \newcommand{\Posterior}{\mathbb{P}}
 
@@ -59,7 +73,7 @@ In this section we present the physical and the statistical models we developed 
 \input{PhysicalModel.tex}
 \input{StatisticalModel.tex}
 
-\input{DataAnalysis.tex}
+%\input{DataAnalysis.tex}
 
 \input{Conclusions.tex}
 

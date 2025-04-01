@@ -11,7 +11,9 @@ In our model, we only consider the motion on the galactic plane ($b\approx0$). W
 \noindent
 where $\varphi$ is the angle from the x-axis of the star with respect to the GC. In the following, primate vectors are in the frame of reference of the Sun, whereas unprimed ones are in the frame of reference of the GC. Angles are supposed to be expressed as radians.
 
-In this frame of reference, the Sun has $\varphi = \pi$, and we assume it to be at a fixed distance $R=\qty{8300}{pc}$ with respect to the GC. In this model, the drift velocity of the LSR (Local Standard of Rest) is also given by equation \ref{eq:VComponents}. In addition, the Sun has its own peculiar motion with respect to the LSR, with components, $U_{\odot}$ along the $x$-axis, and $V_{\odot}$ along the $y$ one. Therefore, the total velocity $v_{\odot}$ of the Sun is:
+\input{CCTikzPicture.tex}
+
+In this frame of reference, the Sun has $\varphi = \pi$, and we assume it to be at a fixed distance $R=\qty{8300}{pc}$ with respect to the GC~\cite{GalacticKinematics}. In this model, the drift velocity of the LSR (Local Standard of Rest) is also given by equation \ref{eq:VComponents}. In addition, the Sun has its own peculiar motion with respect to the LSR, with components, $U_{\odot}$ along the $x$-axis, and $V_{\odot}$ along the $y$ one. Therefore, the total velocity $v_{\odot}$ of the Sun is:
 
 \begin{equation}\label{eq:VSun}
     \bm{v}_{\odot} = \begin{pmatrix} 0 \\ V_{rot} \end{pmatrix} + \begin{pmatrix} U_{\odot} \\ V_{\odot} \end{pmatrix}
@@ -28,7 +30,6 @@ The velocity $\bm{v'}_s$ of a star s, in the frame of reference of the Sun, at d
 \noindent 
 We can now project the velocity $\bm{v'}_s$ onto radial direction with respect to the Sun $\hat{e}_r'$,
 % , given by
-
 % \begin{equation}\label{eq:radialverson}
 %     \hat{e}_r' = \begin{pmatrix} \cos(l) \\ \sin(l) \end{pmatrix}
 % \end{equation}
@@ -44,8 +45,6 @@ obtaining the radial component $v_{\text{rad}'}$ of the velocity of a star with 
 \noindent
 %Note that the rotation of the axis of the frame of reference of the Sun contributes only to the longitudinal component of the relative velocities of stars since $\hat{e}_r' \cdot \hat{e}_l' = 0$.
 
-\input{CCTikzPicture.tex}
-
 Eq.\ref{eq:VSunRad} must be adapted to the actual data provided by GAIA, which means expressing $sin\varphi$ and $cos\varphi$ in terms of $l$ and the parallax $p$, expressed in milliarcoseconds (\unit{mas}). First of all, the distance in parsec can be computed as:
 
 \begin{equation}\label{eq:DistanceParallax}
@@ -54,19 +53,30 @@ Eq.\ref{eq:VSunRad} must be adapted to the actual data provided by GAIA, which m
 
 \noindent
 Then, by geometric considerations we can evaluate $D, \sin\varphi$ and $\cos\varphi$ as a function of $R$, $d$ and $l$ (see figure \ref{fig:FrameOfReference}), obtaining:
-\begin{equation}\label{eq:D}
-    D=\sqrt{d^2 + R^2 - 2dR \cos l}
+
+\begin{equation}\label{eq:Geometry}
+    \begin{aligned}
+        D=&\sqrt{d^2 + R^2 - 2dR \cos l} \\
+        \sin\varphi &= \pm \sqrt{1 - \cos^2 \varphi} = \frac{d\sin l}{D}\\
+        \cos\varphi &= \frac{d \cos l - R}{D}
+    \end{aligned}
 \end{equation}
 
-\begin{equation}\label{eq:SinPhi}
-    \sin\varphi = \pm \sqrt{1 - \cos^2 \varphi} = \frac{d\sin l}{D}
-\end{equation}
+% \begin{equation}\label{eq:D}
+%     D=\sqrt{d^2 + R^2 - 2dR \cos l}
+% \end{equation}
 
-\begin{equation}\label{eq:CosPhi}
-    \cos\varphi = \frac{d \cos l - R}{D}
-\end{equation}
+% \begin{equation}\label{eq:SinPhi}
+%     \sin\varphi = \pm \sqrt{1 - \cos^2 \varphi} = \frac{d\sin l}{D}
+% \end{equation}
+
+% \begin{equation}\label{eq:CosPhi}
+%     \cos\varphi = \frac{d \cos l - R}{D}
+% \end{equation}
+
 \noindent
-By substituting eq.\ref{eq:DistanceParallax}-\ref{eq:CosPhi} into eq.\ref{eq:VSunRad}, we get an expression for the prediction of the model for the radial component of the velocity of star $i$ $\hat{v}_{rad,i}^{(1)}(l_i, p_i)$ as a function of the measurements of its longitude and parallax $l_i, p_i$:
+By substituting eq.%\ref{eq:DistanceParallax}-\ref{eq:CosPhi}
+\ref{eq:Geometry} into eq.\ref{eq:VSunRad}, we get an expression for the prediction of the model for the radial component of the velocity of star $i$ $\hat{v}_{rad,i}^{(1)}(l_i, p_i)$ as a function of the measurements of its longitude and parallax $l_i, p_i$:
 
 \begin{equation}\label{eq:VradModel1}
     \begin{aligned}
@@ -75,7 +85,7 @@ By substituting eq.\ref{eq:DistanceParallax}-\ref{eq:CosPhi} into eq.\ref{eq:VSu
     \end{aligned}
 \end{equation}
 
-In a second, more sophisticated model, we also consider the random motion of all stars, adding to the right-hand-side of equation~\ref{eq:VradModel1} a random variable $v_{\text{rand,i}} \sim N(0, \sigma)$, obtaining:
+In a second, more sophisticated model, we also consider the random motion of all stars. Neglecting the difference of mass between the stars, we assume that the components of their velocities along the radial direction with respect to the Sun $v_{\text{rand,i}} \sim N(0, \sigma)$ are random variables extracted from the same gaussian distribution, centered in 0, and with standard deviation $\sigma$, which has the dimensions of a velocity. The prediction of this model is therefore:
 %distributed with null expected value and variance $\sigma^2$, in order to consider also the peculiar motion of each star, obtaining:
 
 \begin{equation}\label{eq:VradModel2}

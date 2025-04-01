@@ -2346,11 +2346,21 @@
   <bcf:section number="0">
     <bcf:citekey order="1">GAIADR2</bcf:citekey>
     <bcf:citekey order="2">GAIADR2</bcf:citekey>
-    <bcf:citekey order="3">Schneider2015</bcf:citekey>
-    <bcf:citekey order="4">mackay2003</bcf:citekey>
-    <bcf:citekey order="5">GAIADR2</bcf:citekey>
-    <bcf:citekey order="6">Schneider2015</bcf:citekey>
-    <bcf:citekey order="7">mackay2003</bcf:citekey>
+    <bcf:citekey order="3">GalacticKinematics</bcf:citekey>
+    <bcf:citekey order="4">Schneider2015</bcf:citekey>
+    <bcf:citekey order="5">mackay2003</bcf:citekey>
+    <bcf:citekey order="6">LocalKinematics</bcf:citekey>
+    <bcf:citekey order="7">GalacticKinematics</bcf:citekey>
+    <bcf:citekey order="8">GalacticKinematics</bcf:citekey>
+    <bcf:citekey order="9">LocalKinematics</bcf:citekey>
+    <bcf:citekey order="10">LocalKinematics</bcf:citekey>
+    <bcf:citekey order="11">GalacticKinematics</bcf:citekey>
+    <bcf:citekey order="12">GalacticKinematics</bcf:citekey>
+    <bcf:citekey order="13">GAIADR2</bcf:citekey>
+    <bcf:citekey order="14">GalacticKinematics</bcf:citekey>
+    <bcf:citekey order="15">Schneider2015</bcf:citekey>
+    <bcf:citekey order="16">mackay2003</bcf:citekey>
+    <bcf:citekey order="17">LocalKinematics</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

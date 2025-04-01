@@ -3,7 +3,7 @@
 %In this excercise we aim to model the rotation of stars within the Milky Way around its center. 
 In this report we present a model for the rotation of stars in the Milky Way around its center.
 %We introduce an inertial frame of reference centered at the center of the galaxy, with xy-plane coinciding with the galactic plane and x-axis pointing away from the Sun. We will denote it as CG frame.
-In a fisrt simpler model, we assume that the stars in the GC (Galactic Center) frame move in circular orbits around its origin with a constant velocity $V_{\text{rot}}$, as well as the LSR (Local Standard of Rest), and that the Sun frame is moving with a velocity $U_{\odot}$ in the x-direction and $V_{\odot}$ in the y-direction in the GC frame with respect to the LSR. Then, we present a second, more complex model, in which we add, for each star, a random component $v_{\text{rand}}' \sim N(0, \sigma)$ to its radial velocity.
+In a fisrt simpler model, we assume that the stars in the GC (Galactic Center) frame move in circular orbits around its origin with a constant velocity $V_{\text{rot}}$, as well as the LSR (Local Standard of Rest), and that the Sun frame is moving with a velocity $U_{\odot}$ in the x-direction and $V_{\odot}$ in the y-direction in the GC frame with respect to the LSR. Then, we present a second, more complex model, in which we add, for each star, a random component $v_{\text{rand}, i} \sim N(0, \sigma)$ to its radial velocity.
 
 %We are going to assume that also LSR (Local Standard of Rest) is moving with a velocity $V_{rot}$ in the y-direction in the CG frame.
 %We also introduce a frame of reference centered at the Sun, with the x-axis pointing towards the center of the galaxy, and the z-axis pointing towards the North Galactic Pole. We will denote it as Sun frame.
@@ -20,11 +20,12 @@ By means of Bayesian inference on the data we find the distributions of paramete
 We used MCMC (Monte Carlo Markov Chain) to estimate the non-normalized posterior of the two models. 
 
 In the first model, we estimate the parameters and their 95\% confidence interval to be: % put this into a table in Data analysis:
-$V_{\text{rot}} = 211.45$, 95\% CI~=~[211.42,~211.50] \unit{\kilo\meter\per\second}; 
-$u_{\odot} = 11.638$, 95\% CI~=~[11.633,~11.644] \unit{\kilo\meter\per\second}; 
-$v_{\odot} = 21.604$, 95\% CI~=~[21.599,~21.609] \unit{\kilo\meter\per\second}. 
-With the second one instead, we got: 
-$V_{\text{rot}}= 204$, 95\% CI =~[202,~206] \unit{\kilo\meter\per\second}; 
-$u_{\odot} = 11.7$, 95\% CI~=~[11.4,~12.0] \unit{\kilo\meter\per\second}; 
-$v_{\odot} = 21.7$, 95\% CI~=~[21.4,~22.1] \unit{\kilo\meter\per\second}; 
-$\sigma = 30.6$, 95\% CI~=~[30.5,~30.8] \unit{\kilo\meter\per\second}.
+$V_{\text{rot}} = 211.45_{-0.03}^{+0.05}$ \unit{\kilo\meter\per\second};  
+$u_{\odot} = 11.638_{-0.005}^{+0.006}$ \unit{\kilo\meter\per\second};  
+$v_{\odot} = 21.604_{-0.005}^{+0.005}$ \unit{\kilo\meter\per\second}.  
+With the second model instead, we got:  
+$V_{\text{rot}} = 204_{-2}^{+2}$ \unit{\kilo\meter\per\second};  
+$u_{\odot} = 11.7_{-0.3}^{+0.3}$ \unit{\kilo\meter\per\second};  
+$v_{\odot} = 21.7_{-0.3}^{+0.4}$ \unit{\kilo\meter\per\second};  
+$\sigma = 30.6_{-0.1}^{+0.2}$ \unit{\kilo\meter\per\second}.  
+

@@ -2340,6 +2340,53 @@
       \verb http://dx.doi.org/10.1051/0004-6361/201833051
       \endverb
     \endentry
+    \entry{GalacticKinematics}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a69a60e517734c417cdc4abd1da5480b}{%
+           family={Grijs},
+           familyi={G\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=5f78e4009319b56d016bdb6668080d4b}{%
+           family={Bono},
+           familyi={B\bibinitperiod},
+           given={Giuseppe},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The American Astronomical Society}%
+      }
+      \strng{namehash}{e11abccf47ab994fb7ffb8bb72ccd49d}
+      \strng{fullhash}{e11abccf47ab994fb7ffb8bb72ccd49d}
+      \strng{bibnamehash}{e11abccf47ab994fb7ffb8bb72ccd49d}
+      \strng{authorbibnamehash}{e11abccf47ab994fb7ffb8bb72ccd49d}
+      \strng{authornamehash}{e11abccf47ab994fb7ffb8bb72ccd49d}
+      \strng{authorfullhash}{e11abccf47ab994fb7ffb8bb72ccd49d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As part of an extensive data mining effort, we have compiled a database of 162 Galactic rotation speed measurements at R 0 (the solar Galactocentric distance), . Published between 1927 and 2017 June, this represents the most comprehensive set of values since the 1985 meta-analysis that led to the last revision of the International Astronomical Union’s recommended Galactic rotation constants. Although we do not find any compelling evidence for the presence of “publication bias” in recent decades, we find clear differences among the values and the ratios resulting from the use of different tracer populations. Specifically, young tracers (including OB and supergiant stars, masers, Cepheid variables, H ii regions, and young open clusters), as well as kinematic measurements of Sgr A* near the Galactic Center, imply a significantly larger Galactic rotation speed at the solar circle and a higher ratio (i.e., km s−1 and km s−1 kpc−1; statistical uncertainties only) than any of the tracers dominating the Galaxy’s mass budget (i.e., field stars and the H i/CO distributions). Using the latter to be most representative of the bulk of the Galaxy’s matter distribution, we arrive at an updated set of Galactic rotation constants,}
+      \field{journaltitle}{The Astrophysical Journal Supplement Series}
+      \field{month}{10}
+      \field{number}{2}
+      \field{title}{Clustering of Local Group Distances: Publication Bias or Correlated Measurements? V. Galactic Rotation Constants}
+      \field{volume}{232}
+      \field{year}{2017}
+      \field{pages}{22}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3847/1538-4365/aa8b71
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.3847/1538-4365/aa8b71
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.3847/1538-4365/aa8b71
+      \endverb
+    \endentry
     \entry{mackay2003}{book}{}
       \name{author}{1}{}{%
         {{hash=99e8c42965ec01aec3921af3e8ecd658}{%
@@ -2405,6 +2452,56 @@
       \field{year}{2015}
       \verb{doi}
       \verb 10.1007/978-3-642-54083-7
+      \endverb
+    \endentry
+    \entry{LocalKinematics}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b2732b363d14f41dcd0f0583824fcddb}{%
+           family={Schönrich},
+           familyi={S\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7cb5734fc29a879adeda19d8fde85fc6}{%
+           family={Binney},
+           familyi={B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=08172063f9a620be25510b2531bc457a}{%
+           family={Dehnen},
+           familyi={D\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press (OUP)}%
+      }
+      \strng{namehash}{45faf8ef9914a59bc7a66980921b9997}
+      \strng{fullhash}{45faf8ef9914a59bc7a66980921b9997}
+      \strng{bibnamehash}{45faf8ef9914a59bc7a66980921b9997}
+      \strng{authorbibnamehash}{45faf8ef9914a59bc7a66980921b9997}
+      \strng{authornamehash}{45faf8ef9914a59bc7a66980921b9997}
+      \strng{authorfullhash}{45faf8ef9914a59bc7a66980921b9997}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1365-2966}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{month}{4}
+      \field{number}{4}
+      \field{title}{Local kinematics and the local standard of rest}
+      \field{volume}{403}
+      \field{year}{2010}
+      \field{pages}{1829\bibrangedash 1833}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1111/j.1365-2966.2010.16253.x
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1111/j.1365-2966.2010.16253.x
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1111/j.1365-2966.2010.16253.x
       \endverb
     \endentry
   \enddatalist
