@@ -1,17 +1,17 @@
-[1] Config.pm:307> INFO - This is Biber 2.17
-[2] Config.pm:310> INFO - Logfile is 'main.blg'
-[137] biber:340> INFO - === Tue Apr  1, 2025, 13:04:35
-[157] Biber.pm:418> INFO - Reading 'main.bcf'
-[254] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
-[274] Biber.pm:4383> INFO - Processing section 0
-[290] Biber.pm:4574> INFO - Looking for bibtex file 'Bibliography.bib' for section 0
-[294] bibtex.pm:1713> INFO - LaTeX decoding ...
-[310] bibtex.pm:1518> INFO - Found BibTeX data source 'Bibliography.bib'
-[1274] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1274] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1275] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[1275] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[1308] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[2634] bbl.pm:757> INFO - Output to main.bbl
-[2634] Biber.pm:130> WARN - legacy month field 'oct' in entry 'GalacticKinematics' is not an integer - this will probably not sort properly.
-[2635] Biber.pm:132> INFO - WARNINGS: 1
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[67] biber:340> INFO - === Thu Apr  3, 2025, 14:30:01
+[78] Biber.pm:418> INFO - Reading 'main.bcf'
+[140] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
+[150] Biber.pm:4383> INFO - Processing section 0
+[159] Biber.pm:4574> INFO - Looking for bibtex file 'Bibliography.bib' for section 0
+[161] bibtex.pm:1713> INFO - LaTeX decoding ...
+[168] bibtex.pm:1518> INFO - Found BibTeX data source 'Bibliography.bib'
+[676] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[676] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[676] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[676] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[695] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1556] bbl.pm:757> INFO - Output to main.bbl
+[1556] Biber.pm:130> WARN - legacy month field 'oct' in entry 'GalacticKinematics' is not an integer - this will probably not sort properly.
+[1556] Biber.pm:132> INFO - WARNINGS: 1

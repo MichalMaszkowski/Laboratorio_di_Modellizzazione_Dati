@@ -1,7 +1,7 @@
 \subsection{Physical Model}\label{subsec:PhysicalModel}
 
 
-In our model, we only consider the motion on the galactic plane ($b\approx0$). We assume that each star moves with a circular orbit around the Galactic Center GC with the same speed, $V_{\text{rot}}$. Fixing the frame of reference as in figure \ref{fig:FrameOfReference}, a generic star s has a velocity $\bm{v}_{\text{s}}$ given by:
+In our model, we only consider the motion on the galactic plane ($b\approx0$). We assume that each star moves with a circular orbit around the Galactic Center GC with the same speed $V_{\text{rot}}$. Fixing the frame of reference as in figure \ref{fig:FrameOfReference}, a generic star s moves with velocity $\bm{v}_{\text{s}}$ given by:
 
 \begin{equation}\label{eq:VComponents}
     \begin{aligned}
@@ -13,15 +13,15 @@ where $\varphi$ is the angle from the x-axis of the star with respect to the GC.
 
 \input{CCTikzPicture.tex}
 
-In this frame of reference, the Sun has $\varphi = \pi$, and we assume it to be at a fixed distance $R=\qty{8300}{pc}$ with respect to the GC~\cite{GalacticKinematics}. In this model, the drift velocity of the LSR (Local Standard of Rest) is also given by equation \ref{eq:VComponents}. In addition, the Sun has its own peculiar motion with respect to the LSR, with components, $U_{\odot}$ along the $x$-axis, and $V_{\odot}$ along the $y$ one. Therefore, the total velocity $v_{\odot}$ of the Sun is:
+In this frame of reference, the Sun has $\varphi = \pi$, and we assume it to be at a fixed distance $R=\qty{8300}{pc}$ from the GC~\cite{GalacticKinematics}. In this model, the drift velocity of the Local Standard of Rest LSR is also given by equation \ref{eq:VComponents}. In addition, the Sun has its own peculiar motion with respect to the LSR, with components, $U_{\odot}$ along the $x$-axis, and $V_{\odot}$ along the $y$ one. Therefore, the total velocity $\bm{v}_{\odot}$ of the Sun is:
 
 \begin{equation}\label{eq:VSun}
-    \bm{v}_{\odot} = \begin{pmatrix} 0 \\ V_{rot} \end{pmatrix} + \begin{pmatrix} U_{\odot} \\ V_{\odot} \end{pmatrix}
+    \bm{v}_{\odot} = \begin{pmatrix} 0 \\ V_{\text{rot}} \end{pmatrix} + \begin{pmatrix} U_{\odot} \\ V_{\odot} \end{pmatrix}
 \end{equation}
 
 \noindent
 %The frame of reference of the Sun is moving with velocity $\bm{v}_{\odot}$ given by eq.\ref{eq:SunVelocity}, and its axis are rotating with an angular velocity $\bm{w}_{\odot} = -w_{\odot} \hat{e}_z$. 
-The velocity $\bm{v'}_s$ of a star s, in the frame of reference of the Sun, at distance $d$ from the Sun is given by the equation:
+The velocity $\bm{v'}_s$ of a star s in the frame of reference of the Sun is given by the equation:
 \begin{equation}\label{eq:ReferenceFrame}
     \bm{v}_s' = \bm{v}_s - \bm{v}_{\odot} 
     %- \bm{w}_{\odot} \times \hat{e}_r' d = \bm{v}_s - \bm{v}_{\odot} + w_{\odot} \hat{e}_l' d
@@ -45,14 +45,14 @@ obtaining the radial component $v_{\text{rad}'}$ of the velocity of a star with 
 \noindent
 %Note that the rotation of the axis of the frame of reference of the Sun contributes only to the longitudinal component of the relative velocities of stars since $\hat{e}_r' \cdot \hat{e}_l' = 0$.
 
-Eq.\ref{eq:VSunRad} must be adapted to the actual data provided by GAIA, which means expressing $sin\varphi$ and $cos\varphi$ in terms of $l$ and the parallax $p$, expressed in milliarcoseconds (\unit{mas}). First of all, the distance in parsec can be computed as:
+Eq.\ref{eq:VSunRad} must be adapted to the actual data provided by GAIA, which means expressing $sin\varphi$ and $cos\varphi$ in terms of $l$ and the parallax $p$, expressed in milliarcseconds (\unit{mas}). First of all, the distance $d$ in parsec of a star from the Sun can be computed as:
 
 \begin{equation}\label{eq:DistanceParallax}
     d[\unit{pc}] = \frac{1000}{p[\unit{mas}]}
 \end{equation}
 
 \noindent
-Then, by geometric considerations we can evaluate $D, \sin\varphi$ and $\cos\varphi$ as a function of $R$, $d$ and $l$ (see figure \ref{fig:FrameOfReference}), obtaining:
+Then, by geometric considerations we can evaluate the distance $D$ of a star from the GC, $\sin\varphi$ and $\cos\varphi$ as a function of $R$, $d$ and $l$ (see figure \ref{fig:FrameOfReference}), obtaining:
 
 \begin{equation}\label{eq:Geometry}
     \begin{aligned}
@@ -75,22 +75,21 @@ Then, by geometric considerations we can evaluate $D, \sin\varphi$ and $\cos\var
 % \end{equation}
 
 \noindent
-By substituting eq.%\ref{eq:DistanceParallax}-\ref{eq:CosPhi}
-\ref{eq:Geometry} into eq.\ref{eq:VSunRad}, we get an expression for the prediction of the model for the radial component of the velocity of star $i$ $\hat{v}_{rad,i}^{(1)}(l_i, p_i)$ as a function of the measurements of its longitude and parallax $l_i, p_i$:
+By substituting eq.\ref{eq:DistanceParallax}-\ref{eq:Geometry} into eq.\ref{eq:VSunRad}, we get an expression for the prediction of the model for the radial component of the velocity of star $i$ $\hat{v}_{\text{rad},i}^{(1)}$ as a function of the measurements of its longitude $l_i$ and parallax $p_i$:
 
 \begin{equation}\label{eq:VradModel1}
     \begin{aligned}
-        \hat{v}_{rad,i}^{(1)}(l_i, p_i) =&  V_{\text{rot}}\sin l_i \biggl( \frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1 \biggr) -\\
+        \hat{v}_{\text{rad},i}^{(1)}(l_i, p_i) =&  V_{\text{rot}}\sin l_i \biggl( \frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1 \biggr) -\\
         &- U_{\odot}\cos l_i - V_{\odot}\sin l_i
     \end{aligned}
 \end{equation}
 
-In a second, more sophisticated model, we also consider the random motion of all stars. Neglecting the difference of mass between the stars, we assume that the components of their velocities along the radial direction with respect to the Sun $v_{\text{rand,i}} \sim N(0, \sigma)$ are random variables extracted from the same gaussian distribution, centered in 0, and with standard deviation $\sigma$, which has the dimensions of a velocity. The prediction of this model is therefore:
+In a second, more sophisticated model, we also consider the random motion of all stars. Neglecting the difference of mass between the stars, we assume that the components of their velocities along the radial direction with respect to the Sun $v_{\text{rand,i}}$ are random variables extracted from the same gaussian distribution, centered in 0 with standard deviation $\sigma$, which has the dimensions of a velocity ($v_{\text{rand,i}} \sim N(0, \sigma)$). The prediction of this model is therefore:
 %distributed with null expected value and variance $\sigma^2$, in order to consider also the peculiar motion of each star, obtaining:
 
 \begin{equation}\label{eq:VradModel2}
     \begin{aligned}
-        \hat{v}_{rad,i}^{(2)}(l_i, p_i) =&  V_{\text{rot}}\sin l_i \biggl( \frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1 \biggr) -\\
+        \hat{v}_{\text{rad},i}^{(2)}(l_i, p_i) =&  V_{\text{rot}}\sin l_i \biggl( \frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1 \biggr) -\\
         &- U_{\odot}\cos l_i - V_{\odot}\sin l_i + v_{\text{rand,i}}
     \end{aligned}
 \end{equation}

@@ -11,7 +11,7 @@ $\Posterior^{*}(\theta \vert \mathcal{D})$, considering only the numerator of Ba
 \noindent where $\Like(\mathcal{D} \vert \theta)$ is the likelihood and $\Prior(\theta)$ is the prior. In practice, the logarithms of these quantities were used to achieve numerical stability.
 
 %write this here to avoid repetitions
-For simplicity, in both models, we assumed each measurement and each parameter to be independent of all the others. Under this assumptions, the likelihood and the prior factorize in the product of individual terms, and their logarithms are given by the sum of those individual terms. Then, we assume the value $m$ of each measure to be  the sum of its true value, and a random error $\epsilon \sim N(0, \sigma_\text{m})$, extracted from a normal distribution centered at 0, with standard deviation given by the statistical uncertainty provided by GAIA database.
+In both models, we assumed each measurement and each parameter to be independent of all the others, since there is no a-priori reason to consider them to be correlated. Under this assumption, the likelihood and the prior factorize in the product of individual terms, so, their logarithms are given by the sum of those individual terms. Then, we assume the value $m$ of each measure to be  the sum of its true value, and a random error $\epsilon$, extracted from a normal distribution centered at 0 with standard deviation $\sigma_m$ given by the statistical uncertainty provided by GAIA database ($\epsilon \sim N(0, \sigma_\text{m})$).
 
 For the first model we have a set of three parameters $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$. 
 % and for this model we will assume each measurement of the stars' radial velocity 
@@ -25,37 +25,38 @@ Neglecting the uncertainties associated to the parallax measurements, the differ
 The log-likelihood of this model therefore is given by the sum of independant terms as:
 
 \begin{equation}\label{Eq:LogLikeMod1}
-    \log \Like^{(1)}(\mathcal{D} \vert \theta_1) = -\frac{1}{2}\sum_i[\log(2\pi\sigma_{\text{v},i}^2)+\frac{(v_{rad,i} - \hat{v}_{rad,i}^{(1)})^2}{\sigma_{\text{v},i}^2}]
+    \log \Like^{(1)}(\mathcal{D} \vert \theta_1) = -\frac{1}{2}\sum_i[\log(2\pi\sigma_{\text{v},i}^2)+\frac{(v_{\text{rad},i} - \hat{v}_{\text{rad},i}^{(1)})^2}{\sigma_{\text{v},i}^2}]
 \end{equation}
 
 %As prior for this model, we firstly assume the three parameters to be indipendent each other, which is pretty realistic since the rotational motion of all the stars shouldn't influence the peculiar motion of the Sun, and its two components on the galactic should be indipendent a priori. For this reason the prior is the product of the priors of each single parameter. 
 Then, we chose a flat prior for $V_{\text{rot}}\in[0,\qty{500}{\kilo\meter\per\second}]$, 
-in order to include typical values of the rotational motion of stars in spiral barred (Sb) galaxies which are found in the range [144 \unit{\kilo\meter\per\second}, 330\unit{\kilo\meter\per\second}] \cite{Schneider2015}. 
-For $U_\odot$ and $V_\odot$ we chose a gaussian prior centered in 0, $\log\mathbb{P}^{(1)}(U_\odot) + \log\mathbb{P}^{(1)}(U_\odot) \sim - \frac{U_\odot^2 + V_{\odot}^2}{v_{\text{gal}}^2}$, assuming the peculiar motion of the sun to be analogous to a stochastic thermal motion. 
+in order to include typical values of the rotational motion of stars in spiral barred (Sb) galaxies which are found in the range [144,~330]~\unit{\kilo\meter\per\second}\cite{Schneider2015}. 
+For $U_\odot$ and $V_\odot$ we chose a gaussian prior centered in 0, $\log\mathbb{P}^{(1)}(U_\odot) + \log\mathbb{P}^{(1)}(U_\odot) \sim - \frac{U_\odot^2 + V_{\odot}^2}{v_{\text{gal}}^2}$, assuming the peculiar motion of the Sun to be analogous to a stochastic thermal motion. 
 %We chose for the standard deviation of these priors to be $v_{\text{gal}}=\qty{200}{\kilo\meter\per\second}$ since, 
 % as previously described, these are the order of magnitude for stars speed in galaxies.
-As a value for $v_{\text{gal}}$, we arbitrarily chose 200 \unit{\kilo\meter\per\second} as a reference number for the random motion of stars in a Sb galaxy.
+As a value for $v_{\text{gal}}$, we chose 200~\unit{\kilo\meter\per\second} since it is the typical scale of stars' velocities in a Sb galaxy.
 
-In our second model, there are four parameters: $\mathbf{\theta_2} = (V_{rot}, U_{\odot}, V_{\odot}, \sigma)$. 
+In our second model, there are four parameters: $\mathbf{\theta_2} = (V_{\text{rad}}, U_{\odot}, V_{\odot}, \sigma)$. 
 %As for the measurement of the radial velocities, we also assume the measurement of the stars' parallax to be a random variable sampled from a gaussian distribution centered at the true value $p$, with standard deviation given by the error reported by GAIA, $\sigma_{\text{p}}$ ($p \sim N(p,\sigma_{\text{p}})$). Assuming all the measurements to be independant from one another, the log-likelihood for this model is:
-Accounting for the errors on the parallax measurements, the model prediction $\hat{v}^{(2)}_{\text{rad}, i}$ (see equation \ref{eq:VradModel2}) is a random variable extracted from a normal distribution centered in 0, and with variance given by the sum of the variance of the random component $\sigma^2$, and the contribution $\sigma^2_{\text{p}, i -> (2)}$ originating from the error on the parallax measurement. Assuming the parallax error to be small, its contribution can be estimated as:
-
-\begin{equation}\label{eq:ParallaxErrorPropagation}
-    \sigma^2_{\text{p}_i -> (2)} = {\biggl( \frac{\partial \hat{v}^{(2)}_{\text{rad}, i}}{\partial \text{p}_i} \biggr)}^2 \sigma^2_{\text{p}_i}
-\end{equation}
-
-\noindent
+Accounting for the errors on the parallax measurements, the model prediction $\hat{v}^{(2)}_{\text{rad}, i}$ (see equation \ref{eq:VradModel2}) is a random variable extracted from a normal distribution centered in 0 with variance given by the sum of the variance of the random component $\sigma^2$, and the contribution $ {\bigl( \frac{\partial \hat{v}^{(2)}_{\text{rad}, i}}{\partial \text{p}_i} \bigr)}^2 \sigma^2_{\text{p}_i}$ originating from the error on the parallax measurement, 
+%Assuming the parallax error to be small, its contribution can be estimated as:
+%
+% \begin{equation}\label{eq:ParallaxErrorPropagation}
+%     \sigma^2_{\text{p}_i -> (2)} = {\biggl( \frac{\partial \hat{v}^{(2)}_{\text{rad}, i}}{\partial \text{p}_i} \biggr)}^2 \sigma^2_{\text{p}_i}
+% \end{equation}
+%
+%\noindent
 where the derivative can be computed analytically from equation \ref{eq:VradModel2}.
-Then, the difference between the measured value of the radial velocity $v_{\text{rad}, i}$ and the model prediction $\hat{v}^{(2)}_{\text{rad}, i}$ is a random variable extracted from a normal distribution centered in 0, and with total variance given by the sum of the variances of the error on the radial velocity measurements, and that on the model prediction, which results in:
+Then, the difference between the measured value of the radial velocity $v_{\text{rad}, i}$ and the model prediction $\hat{v}^{(2)}_{\text{rad}, i}$ is a random variable extracted from a normal distribution centered in 0 with total variance given by the sum of the variances of the error on the radial velocity measurements, and that on the model prediction, which results in:
 
 \begin{equation}\label{eq:ErrorPropagation}
-    \sigma^2_{\text{tot}, i} = \sigma^2_{\text{v},i} + \sigma^2_{\text{p}_i -> (2)} + \sigma^2
+    \sigma^2_{\text{tot}, i} = \sigma^2_{\text{v},i} +  {\bigl( \frac{\partial \hat{v}^{(2)}_{\text{rad}, i}}{\partial \text{p}_i} \bigr)}^2 \sigma^2_{\text{p}_i} + \sigma^2
 \end{equation}
 
 \noindent
 As the likelihood factors in independent terms, we get, for its logarithm, the expression:
 \begin{equation}\label{Eq:LogLikeMod2}
-    \log \mathbb{\Like}^{(2)}(\mathcal{D} \vert \theta_2) = -\frac{1}{2}\sum_i\left\{\log[2\pi(\sigma_{i}^2+\sigma^2)]+\frac{(v_{rad,i} - \hat{v}_{rad,i}^{(2)})^2}{\sigma_{\text{tot}, i}^2}\right\}
+    \log \mathbb{\Like}^{(2)}(\mathcal{D} \vert \theta_2) = -\frac{1}{2}\sum_i\left\{\log[2\pi(\sigma_{i}^2+\sigma^2)]+\frac{(v_{\text{rad},i} - \hat{v}_{\text{rad},i}^{(2)})^2}{\sigma_{\text{tot}, i}^2}\right\}
 \end{equation}
 
 We keep for the first three parameters the same priors decided in the first model, and we assume the fourth parameter $\sigma$ to be uncorrelated to the others. %(stars peculiar motion at a first glance shouldn't depend on the Sun's one either on their average rotational motion). 
