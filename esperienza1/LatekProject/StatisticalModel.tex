@@ -11,7 +11,7 @@ $\Posterior^{*}(\theta \vert \mathcal{D})$, considering only the numerator of Ba
 \noindent where $\Like(\mathcal{D} \vert \theta)$ is the likelihood and $\Prior(\theta)$ is the prior. In practice, the logarithms of these quantities were used to achieve numerical stability.
 
 %write this here to avoid repetitions
-In both models, we assumed each measurement and each parameter to be independent of all the others, since there is no a-priori reason to consider them to be correlated. Under this assumption, the likelihood and the prior factorize in the product of individual terms, so, their logarithms are given by the sum of those individual terms. Then, we assume the value $m$ of each measure to be  the sum of its true value, and a random error $\epsilon$, extracted from a normal distribution centered at 0 with standard deviation $\sigma_m$ given by the statistical uncertainty provided by GAIA database ($\epsilon \sim N(0, \sigma_\text{m})$).
+In both models, we assumed each measurement and each parameter to be independent of all the others, since there is no a-priori reason to consider them to be correlated. Under this assumption, the likelihood and the prior factorize in the product of individual terms, so, the logarithms are given by their sums. Then, we assume the value $m$ of each measure to be  the sum of its true value, and a random error $\epsilon$, extracted from a normal distribution centered at 0 with standard deviation $\sigma_m$ given by the statistical uncertainty provided by GAIA database ($\epsilon \sim N(0, \sigma_\text{m})$).
 
 For the first model we have a set of three parameters $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$. 
 % and for this model we will assume each measurement of the stars' radial velocity 
