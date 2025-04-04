@@ -1,4 +1,5 @@
-\documentclass{article}
+\documentclass[twocolumn]{article}
+\raggedbottom
 
 \usepackage[T1]{fontenc} 
 \usepackage{bm} %\bm{} bold math
@@ -48,7 +49,16 @@
 \newcommand{\Prior}{\mathbb{P}}
 \newcommand{\Posterior}{\mathbb{P}}
 
-\usepackage[switch, columnwise]{lineno}
+\usepackage[switch]{lineno}
+
+% do this to get the original abstract typesetting
+\renewenvironment{abstract}{%
+  \small
+  \begin{center}%
+    {\bfseries \abstractname\vspace{-0.5em}\vspace{0pt}}%
+  \end{center}%
+  \quotation}
+  {\endquotation}
 
 \title{Rotational Velocity in the Milky Way}
 \author{Colombo Gabriele, Maszkowski Michal, Seghezzi Daniele}
@@ -56,17 +66,25 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\linenumbers
+\sloppy
 
+\runningpagewiselinenumbers
+\linenumbers
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % frontmatter not in multicols
-\maketitle
 
-\input{Introduction.tex}
+\twocolumn[
+\begin{@twocolumnfalse}
+  \maketitle
+  \input{Introduction.tex}
+  \vspace{2mm}
+\end{@twocolumnfalse}
+]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % mainmatter in multicols (save some space)
-\begin{multicols}{2}
+%\begin{multicols}{2}
+
 \input{Datas.tex} % this is a section on its own
 
 \section{Model}
@@ -76,11 +94,12 @@ In this section we present the physical and the statistical models we developed 
 \input{StatisticalModel.tex}
 \input{Conclusions.tex}
 
-\end{multicols} 
+%\end{multicols} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % endmatter, not in multicols
 
+\newpage
 \printbibliography
 \input{Appendix.tex}
 

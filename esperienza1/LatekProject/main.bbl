@@ -2340,6 +2340,57 @@
       \verb http://dx.doi.org/10.1051/0004-6361/201833051
       \endverb
     \endentry
+    \entry{EMCEE}{article}{}
+      \name{author}{4}{}{%
+        {{hash=297dd34bb5e0d14212907cc52b120315}{%
+           family={{Foreman-Mackey}},
+           familyi={F\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a78b8e911ca3f3ee978a4dfb1e7c1c90}{%
+           family={{Hogg}},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=dbc20302a2076fc55584f8c8de575d05}{%
+           family={{Lang}},
+           familyi={L\bibinitperiod},
+           given={Dustin},
+           giveni={D\bibinitperiod}}}%
+        {{hash=eb78632300dc5db908421b31e1bb6f0c}{%
+           family={{Goodman}},
+           familyi={G\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f29a0c9a5cb44c8e87cd2d854d458a22}
+      \strng{fullhash}{06867546eb33e87d8670e9dbf6671e05}
+      \strng{bibnamehash}{f29a0c9a5cb44c8e87cd2d854d458a22}
+      \strng{authorbibnamehash}{f29a0c9a5cb44c8e87cd2d854d458a22}
+      \strng{authornamehash}{f29a0c9a5cb44c8e87cd2d854d458a22}
+      \strng{authorfullhash}{06867546eb33e87d8670e9dbf6671e05}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{astro-ph.IM}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{\pasp}
+      \field{month}{3}
+      \field{number}{925}
+      \field{title}{{emcee: The MCMC Hammer}}
+      \field{volume}{125}
+      \field{year}{2013}
+      \field{pages}{306}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1086/670067
+      \endverb
+      \verb{eprint}
+      \verb 1202.3665
+      \endverb
+      \keyw{Astrophysics - Instrumentation and Methods for Astrophysics,Physics - Computational Physics,Statistics - Computation}
+    \endentry
     \entry{GalacticKinematics}{article}{}
       \name{author}{2}{}{%
         {{hash=a69a60e517734c417cdc4abd1da5480b}{%

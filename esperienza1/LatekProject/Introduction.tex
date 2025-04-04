@@ -17,7 +17,7 @@ For each star on the galactic plane we consider its longitude, parallax, and rad
 We also consider the provided uncertainties of the measurements of parallax and radial velocity.
 
 By means of Bayesian inference on the data we find the distributions of parameters of the two models, namely $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$ and $\mathbf{\theta_2} = (V_{\text{rot}}, U_{\odot}, V_{\odot}, \sigma)$.
-We used MCMC (Monte Carlo Markov Chain) to estimate the non-normalized posterior of the two models. 
+We used MCMC (Monte Carlo Markov Chain) with emcee package in python~\cite{EMCEE} to estimate the non-normalized posterior of the two models. 
 
 In the first model, we estimate the parameters and their 95\% confidence interval to be: % put this into a table in Data analysis:
 $V_{\text{rot}} = 211.45_{-0.04}^{+0.04}$ \unit{\kilo\meter\per\second};  

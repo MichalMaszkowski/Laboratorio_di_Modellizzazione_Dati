@@ -1,8 +1,6 @@
 \subsection{Statistical Model}\label{subsec:StatisticalModel}
 In the following we describe the Bayesian inference we have made on the parameters of the two models. 
-We used Monte Carlo Markov Chains (MCMC) provided by the emcee package in python 
-to get an approximation of the non-normalized posteriors of our models 
-$\Posterior^{*}(\theta \vert \mathcal{D})$, considering only the numerator of Bayes' theorem (posterior):
+We used Monte Carlo Markov Chains (MCMC) provided by the emcee package in python~\cite{EMCEE} to get an approximation of the non-normalized posteriors of our models $\Posterior^{*}(\theta \vert \mathcal{D})$, considering only the numerator of Bayes' theorem (posterior):
 
 \begin{equation}\label{Eq:NonNormPosterior}
     \Posterior^{*}(\theta \vert \mathcal{D}) = \Like(\mathcal{D} \vert \theta) \Prior(\theta)
