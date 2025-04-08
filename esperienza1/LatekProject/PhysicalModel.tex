@@ -5,7 +5,7 @@ In our model, we only consider the motion on the galactic plane ($b\approx0$). W
 
 \begin{equation}\label{eq:VComponents}
     \begin{aligned}
-        \bm{v}_{\text{s}} &= V_{\text{rot}}\begin{pmatrix} \sin(\varphi) \\ -\cos(\varphi) \end{pmatrix}
+        \bm{v}_{\text{s}} &= V_{\text{rot}}\begin{pmatrix} \sin(\varphi) \\ -\cos(\varphi) \end{pmatrix} \text{ ,}
     \end{aligned}
 \end{equation}
 \noindent
@@ -16,14 +16,14 @@ where $\varphi$ is the angle from the x-axis of the star with respect to the GC.
 In this frame of reference, the Sun has $\varphi = \pi$, and we assume it to be at a fixed distance $R=\qty{8300}{pc}$ from the GC~\cite{GalacticKinematics}. In this model, the drift velocity of the Local Standard of Rest LSR is also given by equation \ref{eq:VComponents}. In addition, the Sun has its own peculiar motion with respect to the LSR, with components, $U_{\odot}$ along the $x$-axis, and $V_{\odot}$ along the $y$ one. Therefore, the total velocity $\bm{v}_{\odot}$ of the Sun is:
 
 \begin{equation}\label{eq:VSun}
-    \bm{v}_{\odot} = \begin{pmatrix} 0 \\ V_{\text{rot}} \end{pmatrix} + \begin{pmatrix} U_{\odot} \\ V_{\odot} \end{pmatrix}
+    \bm{v}_{\odot} = \begin{pmatrix} 0 \\ V_{\text{rot}} \end{pmatrix} + \begin{pmatrix} U_{\odot} \\ V_{\odot} \end{pmatrix} \text{ .}
 \end{equation}
 
 \noindent
 %The frame of reference of the Sun is moving with velocity $\bm{v}_{\odot}$ given by eq.\ref{eq:SunVelocity}, and its axis are rotating with an angular velocity $\bm{w}_{\odot} = -w_{\odot} \hat{e}_z$. 
 The velocity $\bm{v'}_s$ of a star s in the frame of reference of the Sun is given by the equation:
 \begin{equation}\label{eq:ReferenceFrame}
-    \bm{v}_s' = \bm{v}_s - \bm{v}_{\odot} 
+    \bm{v}_s' = \bm{v}_s - \bm{v}_{\odot} \text{ .}
     %- \bm{w}_{\odot} \times \hat{e}_r' d = \bm{v}_s - \bm{v}_{\odot} + w_{\odot} \hat{e}_l' d
 \end{equation}
 
@@ -39,7 +39,7 @@ obtaining the radial component $v_{\text{rad}'}$ of the velocity of a star with 
 \begin{equation}\label{eq:VSunRad}
     \begin{aligned}
         v_{\text{rad}'}  &= \bm{v}_s' \cdot \hat{e}_r' = \\ 
-        &=V_{\text{rot}} \biggl[ \sin\varphi \cos l - (1 + \cos\varphi)\sin l \biggr] - U_{\odot} \cos l - V_{\odot} \sin l
+        &=V_{\text{rot}} \biggl[ \sin\varphi \cos l - (1 + \cos\varphi)\sin l \biggr] - U_{\odot} \cos l - V_{\odot} \sin l \text{ .}
     \end{aligned}
 \end{equation}
 \noindent
@@ -48,7 +48,7 @@ obtaining the radial component $v_{\text{rad}'}$ of the velocity of a star with 
 Eq.\ref{eq:VSunRad} must be adapted to the actual data provided by GAIA, which means expressing $sin\varphi$ and $cos\varphi$ in terms of $l$ and the parallax $p$, expressed in milliarcseconds (\unit{mas}). First of all, the distance $d$ in parsec of a star from the Sun can be computed as:
 
 \begin{equation}\label{eq:DistanceParallax}
-    d[\unit{pc}] = \frac{1000}{p[\unit{mas}]}
+    d[\unit{pc}] = \frac{1000}{p[\unit{mas}]} \text{ .}
 \end{equation}
 
 \noindent
@@ -58,7 +58,7 @@ Then, by geometric considerations we can evaluate the distance $D$ of a star fro
     \begin{aligned}
         D=&\sqrt{d^2 + R^2 - 2dR \cos l} \\
         \sin\varphi &= \pm \sqrt{1 - \cos^2 \varphi} = \frac{d\sin l}{D}\\
-        \cos\varphi &= \frac{d \cos l - R}{D}
+        \cos\varphi &= \frac{d \cos l - R}{D} \text{ .}
     \end{aligned}
 \end{equation}
 
@@ -80,7 +80,7 @@ By substituting eq.\ref{eq:DistanceParallax}-\ref{eq:Geometry} into eq.\ref{eq:V
 \begin{equation}\label{eq:VradModel1}
     \begin{aligned}
         \hat{v}_{\text{rad},i}^{(1)}(l_i, p_i) =&  V_{\text{rot}}\sin l_i \biggl( \frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1 \biggr) -\\
-        &- U_{\odot}\cos l_i - V_{\odot}\sin l_i
+        &- U_{\odot}\cos l_i - V_{\odot}\sin l_i \text{ .}
     \end{aligned}
 \end{equation}
 
@@ -90,6 +90,6 @@ In a second, more sophisticated model, we also consider the random motion of all
 \begin{equation}\label{eq:VradModel2}
     \begin{aligned}
         \hat{v}_{\text{rad},i}^{(2)}(l_i, p_i) =&  V_{\text{rot}}\sin l_i \biggl( \frac{R}{\sqrt{(\frac{1000}{p_i})^2 + R^2 - 2(\frac{1000}{p_i})R \cos l_i}}-1 \biggr) -\\
-        &- U_{\odot}\cos l_i - V_{\odot}\sin l_i + v_{\text{rand,i}}
+        &- U_{\odot}\cos l_i - V_{\odot}\sin l_i + v_{\text{rand,i}} \text{ .}
     \end{aligned}
 \end{equation}

@@ -4,8 +4,8 @@
 In this report we present a model for the rotation of stars in the Milky Way around its center.
 %We introduce an inertial frame of reference centered at the center of the galaxy, with xy-plane coinciding with the galactic plane and x-axis pointing away from the Sun. We will denote it as CG frame.
 % In a fisrt simpler model, we assume that the stars in the GC (Galactic Center) frame move in circular orbits around its origin with a constant velocity $V_{\text{rot}}$, as well as the LSR (Local Standard of Rest), and that the Sun frame is moving with a velocity $U_{\odot}$ in the x-direction and $V_{\odot}$ in the y-direction in the GC frame with respect to the LSR (figure~\ref{fig:FrameOfReference}). Then, we present a second, more complex model, in which we add, for each star, a random component $v_{\text{rand}, i} \sim N(0, \sigma)$ to its radial velocity, accounting for their random motion.
-Firstly (in a simpler model), we assume that the stars, as well as the LSR (Local Standard of Rest), 
-move in circular orbits around the origin of the GC (Galactic Center) frame with a constant velocity $V_{\text{rot}}$, and that the Sun is moving with respect to the LSR with a velocity $U_{\odot}$ in the x-direction and $V_{\odot}$ in the y-direction in the GC frame. 
+Firstly, in a simpler model, we assume that the stars, as well as the Local Standard of Rest (LSR), 
+move in circular orbits around the origin of the Galactic Center (GC) frame with a constant velocity $V_{\text{rot}}$, and that the Sun is moving with respect to the LSR with a velocity $U_{\odot}$ in the x-direction and $V_{\odot}$ in the y-direction in the GC frame. 
 Then, we present a more complex model, in which for each star, a random component $v_{\text{rand}}' \sim N(0, \sigma)$ is added to its velocity.
 
 %We are going to assume that also LSR (Local Standard of Rest) is moving with a velocity $V_{\text{rad}}$ in the y-direction in the CG frame.
@@ -13,11 +13,11 @@ Then, we present a more complex model, in which for each star, a random componen
 %The Sun frame is rotating with an angular velocity $w$ around the z-axis due to the rotation of the galaxy with respect to the CG frame.
 
 %In both cases we aim to model the velocity of stars in the radial direction in the Sun frame of reference. 
-Applying Bayesian inference on the data provided by GAIA DR2~\cite{GAIADR2}, we find the distributions of parameters of the two models, namely $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$ and $\mathbf{\theta_2} = (V_{\text{rot}}, U_{\odot}, V_{\odot}, \sigma)$.
+Applying Bayesian inference on the data provided by GAIA Data Release 2 (DR2)~\cite{GAIADR2}, we find the distributions of parameters of the two models, namely $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$ and $\mathbf{\theta_2} = (V_{\text{rot}}, U_{\odot}, V_{\odot}, \sigma)$.
 For each star on the galactic plane we consider its measured longitude, parallax, and radial velocity, with respect to the Sun frame of reference.
 We also consider the provided uncertainties of the measurements of parallax and radial velocity.
 
-We utilized the MCMC (Monte Carlo Markov Chain) implementation from the emcee package in Python~\cite{EMCEE} to estimate the posterior distributions of both models.
+We utilized the Monte Carlo Markov Chain (MCMC) implementation from the emcee~\cite{EMCEE} package in Python to estimate the posterior distributions of both models.
 
 In the first one, we estimate the parameters and their 95\% confidence interval to be: % put this into a table in Data analysis:
 $V_{\text{rot}} = 211.45_{-0.04}^{+0.04}$ \unit{\kilo\meter\per\second};  
