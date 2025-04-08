@@ -1,23 +1,25 @@
 \section{Conclusions}
 
-The median values of the posterior probability distributions of the two models, and their 95\% confidence intervals, are reported in table~\ref{tab:parameter_estimates}. It can be observed that the estimates for $U_\odot$ and $V_\odot$ of the two models are compatible with one another, whereas the 95\% confidence interval of the two estimates of $V_{\text{rot}}$ do not overlap. Both estimates of $U_\odot$ are in good agreement with that found in literature~\cite{LocalKinematics}, whereas both estimates of $V_\odot$ are far from being compatible with those in the same ~\cite{LocalKinematics}. The results for $V_{\text{rot}}$ were also compared to those obtained in literature~\cite{GalacticKinematics}. Our estimates result to be lower, but both models yield a non-null overlap of their respective 95\% confidence interval with that of the value found in the literature. The posterior distributions we obtained for the parameters are shown in Appendix~\ref{Appendix:PosteriorDistributions}.
-Finally, the middle and lower panels of fig.\ref{fig:DataModelPresentation} present the predictions of the two models, made with the median values obtained for the parameters, using the longitude and parallax of the sample of stars. In the second model, we simulated the contribution of $v_{\text{rand}, i}$ by adding a random number, sampled from a Gaussian centered in 0, with standard deviation given by the median value found for $\sigma$. Visually, it is clear that the second model reproduces the data better than the first one, and that the random motion of stars is crucial to model the radial velocities of stars correctly. 
+The median values and 95\% confidence intervals of the posterior distributions for both models are reported in Table~\ref{tab:parameter_estimates}. The estimates for $U_\odot$ and $V_\odot$ are consistent across the two models, while the estimates for $V_{\text{rot}}$ differ significantly — their respective 95\% confidence intervals do not overlap.
+
+The inferred values of $U_\odot$ from both models are in good agreement with results from the literature~\cite{LocalKinematics}, while the estimates of $V_\odot$ are notably higher and incompatible with those reported in the same source. Regarding $V_{\text{rot}}$, our values are slightly lower than the literature estimate~\cite{GalacticKinematics}, but both models yield confidence intervals that partially overlap with the reference value, indicating general consistency.
+
+The posterior distributions for all parameters are presented in Appendix~\ref{Appendix:PosteriorDistributions}. Additionally, the middle and lower panels of Figure~\ref{fig:DataModelPresentation} show the model predictions based on the median posterior values, using the longitude and parallax of the observed stars. For the second model, the effect of stellar random motion was simulated by adding a Gaussian noise term $v_{\text{rand}, i} \sim \mathcal{N}(0, \sigma)$, using the inferred value of $\sigma$.
+
+Visually, it is evident that the second model provides a better fit to the data, highlighting the importance of incorporating the random motion of stars to accurately model their observed radial velocities.
 
 \begin{table}[H]
     \centering
-
     \begin{tabular}{l c c | c}
         \hline
-        Parameter & Model 1 & Model 2 & Literature\\
+        Parameter & Model 1 & Model 2 & Literature \\
         \hline
-        $V_{\text{rot}}$ [\unit{\kilo\meter\per\second}] & $211.45_{-0.04}^{+0.04}$ & $204_{-2}^{+2}$ & 225 $\pm$ 10~\cite{GalacticKinematics} \\
-        $U_{\odot}$ [\unit{\kilo\meter\per\second}] & $11.638_{-0.005}^{+0.004}$ & $11.7_{-0.3}^{+0.3}$ & $11.1_{-0.8}^{+0.7}$~\cite{LocalKinematics} \\
-        $V_{\odot}$ [\unit{\kilo\meter\per\second}] & $21.604_{-0.005}^{+0.005}$ & $21.7_{-0.3}^{+0.3}$ & $12.2^{+0.5}
-        _{-0.5}$~\cite{LocalKinematics} \\
-        $\sigma$ [\unit{\kilo\meter\per\second}] & --- & $30.6_{-0.2}^{+0.2}$ & --- \\
+        $V_{\text{rot}}$ [\unit{\kilo\meter\per\second}] & $211.45^{+0.04}_{-0.04}$ & $204^{+2}_{-2}$ & $225 \pm 10$~\cite{GalacticKinematics} \\
+        $U_{\odot}$ [\unit{\kilo\meter\per\second}] & $11.638^{+0.004}_{-0.005}$ & $11.7^{+0.3}_{-0.3}$ & $11.1^{+0.7}_{-0.8}$~\cite{LocalKinematics} \\
+        $V_{\odot}$ [\unit{\kilo\meter\per\second}] & $21.604^{+0.005}_{-0.005}$ & $21.7^{+0.3}_{-0.3}$ & $12.2^{+0.5}_{-0.5}$~\cite{LocalKinematics} \\
+        $\sigma$ [\unit{\kilo\meter\per\second}] & --- & $30.6^{+0.2}_{-0.2}$ & --- \\
         \hline
     \end{tabular}
-    \caption{Estimated parameters and their 95\% confidence intervals for the two models. The value found in the literature for $V_{\text{rot}}$ is reported with its total uncertainty (one standard deviation), obtained by summing in quadrature the statistical and systematic uncertainties reported in the original article~\cite{GalacticKinematics}.}
+    \caption{Estimated parameters and their 95\% confidence intervals for the two models. The literature value of $V_{\text{rot}}$ includes total uncertainty (1$\sigma$), combining statistical and systematic contributions as reported in~\cite{GalacticKinematics}.}
     \label{tab:parameter_estimates}
 \end{table}
-
