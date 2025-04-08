@@ -1,22 +1,38 @@
 \section*{Abstract}
-In this report we present a model for the rotation of stars in the Milky Way around its center.
-Firstly, in a simpler model, we assume that the stars, as well as the Local Standard of Rest (LSR), 
-move in circular orbits around the origin of the Galactic Center (GC) frame with a constant velocity $V_{\text{rot}}$, and that the Sun is moving with respect to the LSR with a velocity $U_{\odot}$ in the x-direction and $V_{\odot}$ in the y-direction in the GC frame. 
-Then, we present a more complex model, in which for each star, a random component $v_{\text{rand}}' \sim N(0, \sigma)$ is added to its velocity.
+% In this report we present a model for the rotation of stars in the Milky Way around its center.
+In this report, we present a Bayesian model for the rotational motion of stars in the Milky Way galaxy, 
+using observational data from the Gaia Data Release 2 (DR2)~\cite{GAIADR2}. 
+% Firstly, in a simpler model, we assume that the stars, as well as the Local Standard of Rest (LSR), 
+% move in circular orbits around the origin of the Galactic Center (GC) frame with a constant velocity $V_{\text{rot}}$, 
+% and that the Sun is moving with respect to the LSR with a velocity $U_{\odot}$ in the x-direction 
+% and $V_{\odot}$ in the y-direction in the GC frame. 
+We begin by introducing a simplified physical model in which both the stars and the Local Standard of Rest (LSR) 
+follow circular orbits around the Galactic Center (GC) with a constant velocity $V_{\text{rot}}$. 
+The Sun is modeled as moving relative to the LSR with components $U_{\odot}$ (in the $x$-direction) 
+and $V_{\odot}$ (in the $y$-direction), all defined within the GC frame. 
+% Then, we present a more complex model, in which for each star, a random component $v_{\text{rand}}' \sim N(0, \sigma)$ is added to its velocity.
+We then extend this model by introducing a random velocity component $v_{\text{rand}}' \sim \mathcal{N}(0, \sigma)$ for each star, 
+to account for intrinsic stellar motion not captured by pure circular rotation.
 
-%In both cases we aim to model the velocity of stars in the radial direction in the Sun frame of reference. 
-Applying Bayesian inference on the data provided by GAIA Data Release 2 (DR2)~\cite{GAIADR2}, we find the distributions of parameters of the two models, namely $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$ and $\mathbf{\theta_2} = (V_{\text{rot}}, U_{\odot}, V_{\odot}, \sigma)$.
-For each star on the galactic plane we consider its measured longitude, parallax, and radial velocity, with respect to the Sun frame of reference.
-We also consider the provided uncertainties of the measurements of parallax and radial velocity.
+% %In both cases we aim to model the velocity of stars in the radial direction in the Sun frame of reference. 
+% Applying Bayesian inference on the data provided by GAIA Data Release 2 (DR2)~\cite{GAIADR2}, we find the distributions of parameters of the two models, namely $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$ and $\mathbf{\theta_2} = (V_{\text{rot}}, U_{\odot}, V_{\odot}, \sigma)$.
+% For each star on the galactic plane we consider its measured longitude, parallax, and radial velocity, with respect to the Sun frame of reference.
+% We also consider the provided uncertainties of the measurements of parallax and radial velocity.
 
-We utilized the Monte Carlo Markov Chain (MCMC) implementation from the emcee~\cite{EMCEE} package in Python to estimate the posterior distributions of both models.
+% We utilized the Monte Carlo Markov Chain (MCMC) implementation from the emcee~\cite{EMCEE} package in Python to estimate the posterior distributions of both models.
+Using Bayesian inference and applying Markov Chain Monte Carlo (MCMC) sampling via the \texttt{emcee}~\cite{EMCEE} package, 
+we estimate the posterior distributions of the model parameters. 
+The inference is performed using stellar longitude, parallax, and radial velocity measurements, 
+along with their associated uncertainties, all expressed in the Sun-centered reference frame.
 
-In the first one, we estimate the parameters and their 95\% confidence interval to be: % put this into a table in Data analysis:
+% In the first one, we estimate the parameters and their 95\% confidence interval to be: % put this into a table in Data analysis:
+For the simpler model, we estimate the parameters (with 95\% confidence intervals) as:  
 $V_{\text{rot}} = 211.45_{-0.04}^{+0.04}$ \unit{\kilo\meter\per\second};  
 $U_{\odot} = 11.638_{-0.005}^{+0.005}$ \unit{\kilo\meter\per\second};  
 $U_{\odot} = 21.604_{-0.005}^{+0.005}$ \unit{\kilo\meter\per\second}.  
 
-With the second model instead, we got:  
+% With the second model instead, we got: 
+In the extended model including the velocity dispersion, we find: 
 $V_{\text{rot}} = 204_{-2}^{+2}$ \unit{\kilo\meter\per\second};  
 $U_{\odot} = 11.7_{-0.3}^{+0.3}$ \unit{\kilo\meter\per\second};  
 $U_{\odot} = 21.7_{-0.3}^{+0.3}$ \unit{\kilo\meter\per\second};  
