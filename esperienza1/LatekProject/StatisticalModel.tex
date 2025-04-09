@@ -24,14 +24,13 @@ We assume the three parameters to be mutually independent. For $V_{\text{rot}}$,
 with $v_{\text{gal}} = \qty{200}{\kilo\meter\per\second}$, reflecting the typical velocity scale in spiral galaxies~\cite{Schneider2015}, as previously mentioned.
 
 In the second model, the parameter vector is $\mathbf{\theta_2} = (V_{\text{rot}}, U_{\odot}, V_{\odot}, \sigma)$. In this case, uncertainties in both radial velocity and parallax are taken into account. 
-The model prediction \(\hat{v}^{(2)}_{\text{rad}, i}\) (eq.\ref{eq:VradModel2}) is treated as a random variable drawn from a normal distribution whose variance includes two contributions: the intrinsic dispersion \(\sigma^2\), and the uncertainty due to parallax measurement errors.
+The model prediction \(\hat{v}^{(2)}_{\text{rad}, i}\) (eq.\ref{eq:VradModel2}) is treated as a random variable drawn from a normal distribution whose variance includes two contributions: the intrinsic dispersion \(\sigma^2\), which is the square of the fourth model parameter, and the uncertainty due to parallax measurement errors.
 Assuming the parallax error is small, its contribution to the model variance can be approximated by \(\left( \frac{\partial \hat{v}^{(2)}_{\text{rad}, i}}{\partial p_i} \right)^2 \sigma^2_{p_i}\), where the derivative is analytically derived from eq.\ref{eq:VradModel2}. 
 The difference between the measured radial velocity \(v_{\text{rad}, i}\) and the model prediction \(\hat{v}^{(2)}_{\text{rad}, i}\) is then modeled as a Gaussian random variable centered at zero, with total variance equal to the sum of the variances of the radial velocity measurement, the parallax-induced component, and the intrinsic dispersion:
 
 \begin{equation}\label{eq:ErrorPropagation}
     \sigma^2_{\text{tot}, i} = \sigma^2_{\text{v},i} +  {\left( \frac{\partial \hat{v}^{(2)}_{\text{rad}, i}}{\partial p_i} \right)}^2 \sigma^2_{p_i} + \sigma^2 \text{ .}
 \end{equation}
-
 
 The log-likelihood is therefore:
 \begin{equation}\label{Eq:LogLikeMod2}

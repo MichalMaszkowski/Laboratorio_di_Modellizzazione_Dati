@@ -11,7 +11,7 @@ where $\varphi$ is the angle between the star’s position vector and the $x$-ax
 
 \input{CCTikzPicture.tex}
 
-In this reference frame, the Sun is located at $\varphi = \pi$, at a fixed distance of $R = \qty{8300}{pc}$ from the GC~\cite{GalacticKinematics}. The Local Standard of Rest (LSR) shares the same rotational velocity as described by Eq.~\ref{eq:VComponents}. Additionally, the Sun has a peculiar motion with respect to the LSR, with components $U_{\odot}$ along the $x$-axis and $V_{\odot}$ along the $y$-axis. The total velocity of the Sun is therefore:
+In this reference frame, the Sun is located at $\varphi = \pi$, at a fixed distance of $R = \qty{8300}{pc}$ from the GC~\cite{GalacticKinematics}. The Local Standard of Rest (LSR) shares the same rotational velocity as described by Eq.~\ref{eq:VComponents}. Additionally, we include in both the models we present the Sun's peculiar motion with respect to the LSR, with components $U_{\odot}$ along the $x$-axis and $V_{\odot}$ along the $y$-axis. The total velocity of the Sun is therefore:
 
 \begin{equation}\label{eq:VSun}
     \bm{v}_{\odot} = \begin{pmatrix} 0 \\ V_{\text{rot}} \end{pmatrix} + \begin{pmatrix} U_{\odot} \\ V_{\odot} \end{pmatrix}.
@@ -57,7 +57,7 @@ Substituting Eqs.~\ref{eq:DistanceParallax}--\ref{eq:Geometry} into Eq.~\ref{eq:
     \end{aligned}
 \end{equation}
 
-In a more refined second model, we account for the random peculiar motion of stars. We model each star's radial velocity component due to random motion as a Gaussian variable: $v_{\text{rand},i} \sim \mathcal{N}(0, \sigma)$, where $\sigma$ is the velocity dispersion. The corresponding prediction becomes:
+In a more refined second model, we account for the random peculiar motion of stars in addition to their drift velocity, described by eq.\ref{eq:VComponents}. We model the random component of the radial velocity of each star as a Gaussian variable: $v_{\text{rand},i} \sim \mathcal{N}(0, \sigma)$, where $\sigma$ is the velocity dispersion. The corresponding prediction becomes:
 
 \begin{equation}\label{eq:VradModel2}
     \begin{aligned}
