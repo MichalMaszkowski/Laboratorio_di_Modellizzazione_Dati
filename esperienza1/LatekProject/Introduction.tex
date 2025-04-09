@@ -1,18 +1,17 @@
 \section*{Abstract}
 % In this report we present a model for the rotation of stars in the Milky Way around its center.
-In this report, we present a Bayesian model for the rotational motion of stars in the Milky Way galaxy, 
+In this report, we present two Bayesian models for the rotational motion of stars in the Milky Way galaxy, 
 using observational data from the Gaia Data Release 2 (DR2)~\cite{GAIADR2}. 
 % Firstly, in a simpler model, we assume that the stars, as well as the Local Standard of Rest (LSR), 
 % move in circular orbits around the origin of the Galactic Center (GC) frame with a constant velocity $V_{\text{rot}}$, 
 % and that the Sun is moving with respect to the LSR with a velocity $U_{\odot}$ in the x-direction 
 % and $V_{\odot}$ in the y-direction in the GC frame. 
 We begin by introducing a simplified physical model in which both the stars and the Local Standard of Rest (LSR) 
-follow circular orbits around the Galactic Center (GC) with a constant velocity $V_{\text{rot}}$. 
+follow circular orbits around the Galactic Center (GC) with a constant speed $V_{\text{rot}}$. 
 The Sun is modeled as moving relative to the LSR with components $U_{\odot}$ (in the $x$-direction) 
 and $V_{\odot}$ (in the $y$-direction), all defined within the GC frame. 
 % Then, we present a more complex model, in which for each star, a random component $v_{\text{rand}}' \sim N(0, \sigma)$ is added to its velocity.
-We then extend this model by introducing a random velocity component $v_{\text{rand}}' \sim \mathcal{N}(0, \sigma)$ for each star, 
-to account for intrinsic stellar motion not captured by pure circular rotation.
+We then extend this model by introducing a random velocity component $v_{\text{rand}}' \sim \mathcal{N}(0, \sigma)$ for each star, to account for intrinsic stellar motion not captured by the pure circular rotation.
 
 % %In both cases we aim to model the velocity of stars in the radial direction in the Sun frame of reference. 
 % Applying Bayesian inference on the data provided by GAIA Data Release 2 (DR2)~\cite{GAIADR2}, we find the distributions of parameters of the two models, namely $\mathbf{\theta_1} = (V_{\text{rot}}, U_{\odot}, V_{\odot})$ and $\mathbf{\theta_2} = (V_{\text{rot}}, U_{\odot}, V_{\odot}, \sigma)$.
@@ -26,7 +25,7 @@ The inference is performed using stellar longitude, parallax, and radial velocit
 along with their associated uncertainties, all expressed in the Sun-centered reference frame.
 
 % In the first one, we estimate the parameters and their 95\% confidence interval to be: % put this into a table in Data analysis:
-For the simpler model, we estimate the parameters (with 95\% confidence intervals) as:  
+For the simpler model, we estimate the parameters and their 95\% confidence intervals as:  
 $V_{\text{rot}} = 211.45 \pm 0.04$ \unit{\kilo\meter\per\second};  
 $U_{\odot} = 11.638 \pm 0.005$ \unit{\kilo\meter\per\second};  
 $V_{\odot} = 21.604 \pm 0.005$ \unit{\kilo\meter\per\second}.  
